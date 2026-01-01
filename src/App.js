@@ -213,8 +213,15 @@ const AnniversaryCalendar = () => {
     };
 
     return (
-      <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 z-50" style={{overflowY: 'auto'}}>
-        <div className="day-card-modal bg-white rounded-lg max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl">
+      <div 
+        className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 z-50" 
+        style={{overflowY: 'auto'}}
+        onClick={() => setSelectedDay(null)}
+      >
+        <div 
+          className="day-card-modal bg-white rounded-lg max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl"
+          onClick={(e) => e.stopPropagation()}
+        >
           <div className="relative h-48 overflow-hidden" style={{backgroundColor: day.bgColor}}>
             <button onClick={() => setSelectedDay(null)} className="absolute top-4 right-4 text-gray-700 hover:text-gray-900 text-3xl w-10 h-10 flex items-center justify-center bg-white/50 rounded-full">×</button>
             <Icon className="w-12 h-12 mb-3" style={{position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)'}} />
@@ -254,7 +261,10 @@ const AnniversaryCalendar = () => {
                   {/* Previous Button */}
                   {day.content.extraPhotos.length > 1 && (
                     <button
-                      onClick={prevPhoto}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        prevPhoto();
+                      }}
                       style={{
                         position: 'absolute',
                         left: '10px',
@@ -282,7 +292,10 @@ const AnniversaryCalendar = () => {
                   {/* Next Button */}
                   {day.content.extraPhotos.length > 1 && (
                     <button
-                      onClick={nextPhoto}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        nextPhoto();
+                      }}
                       style={{
                         position: 'absolute',
                         right: '10px',
@@ -358,6 +371,7 @@ const AnniversaryCalendar = () => {
               <textarea
                 value={responseText}
                 onChange={(e) => setResponseText(e.target.value)}
+                onClick={(e) => e.stopPropagation()}
                 placeholder="Write your response here..."
                 style={{
                   width: '100%',
@@ -371,7 +385,10 @@ const AnniversaryCalendar = () => {
                 }}
               />
               <button
-                onClick={handleSaveResponse}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  handleSaveResponse();
+                }}
                 style={{
                   marginTop: '15px',
                   backgroundColor: '#ff69b4',
@@ -729,7 +746,7 @@ const AnniversaryCalendar = () => {
         </div>
       </div>
 
-      <div style={{maxWidth: '900px', margin: '40px auto 0', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', position: 'relative', zIndex: 2}}>
+      <div style={{maxWidth: '900px', margin: '20px auto 20px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', position: 'relative', zIndex: 2}}>
         <div style={{backgroundColor: '#fff', padding: '30px', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)', textAlign: 'center', position: 'relative'}}>
           {!isRestaurantSpinnerUnlocked() && (
             <div style={{
