@@ -42,30 +42,9 @@ const AnniversaryCalendar = () => {
     return currentDate >= unlockDate;
   };
 
-  // Fireworks effect - only on January 1st
+  // Fireworks effect - DISABLED
   useEffect(() => {
-    const isJanuary1st = () => {
-      if (demoMode) return true; // Show in demo mode
-      const currentDate = new Date();
-      return currentDate.getMonth() === 0 && currentDate.getDate() === 1;
-    };
-
-    if (isJanuary1st()) {
-      const createFirework = () => {
-        const newFirework = {
-          id: Math.random(),
-          left: Math.random() * 100,
-          animationDuration: 1 + Math.random() * 2
-        };
-        setFireworks(prev => [...prev, newFirework]);
-        setTimeout(() => {
-          setFireworks(prev => prev.filter(fw => fw.id !== newFirework.id));
-        }, 3000);
-      };
-
-      const interval = setInterval(createFirework, 2000);
-      return () => clearInterval(interval);
-    }
+    // Fireworks disabled to prevent re-render issues
   }, []);
 
   const collagePhotos = [
