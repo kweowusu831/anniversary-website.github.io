@@ -713,6 +713,99 @@ const AnniversaryCalendar = () => {
         </div>
       </div>
 
+      {/* Cat-Themed Virtual Hug & Kiss Component */}
+      <div style={{
+        maxWidth: '900px',
+        margin: '30px auto',
+        display: 'grid',
+        gridTemplateColumns: '1fr 1fr',
+        gap: '20px',
+        position: 'relative',
+        zIndex: 2
+      }}>
+        {/* Virtual Hug Button */}
+        <div style={{
+          padding: '40px',
+          background: 'linear-gradient(135deg, #ffeef8 0%, #ffe4f0 100%)',
+          borderRadius: '20px',
+          boxShadow: '0 8px 30px rgba(255, 105, 180, 0.3)',
+          textAlign: 'center',
+          border: '3px solid #ff69b4',
+          cursor: 'pointer',
+          transition: 'transform 0.2s, box-shadow 0.2s'
+        }}
+        onClick={() => {
+          alert('🐱 *Purrrr* Wrapping my paws around you in the warmest hug! I love you so much, my love! 💕🐾');
+        }}
+        onMouseOver={(e) => {
+          e.currentTarget.style.transform = 'scale(1.02)';
+          e.currentTarget.style.boxShadow = '0 10px 40px rgba(255, 105, 180, 0.5)';
+        }}
+        onMouseOut={(e) => {
+          e.currentTarget.style.transform = 'scale(1)';
+          e.currentTarget.style.boxShadow = '0 8px 30px rgba(255, 105, 180, 0.3)';
+        }}
+        >
+          <div style={{fontSize: '4rem', marginBottom: '15px'}}>🐱</div>
+          <h2 style={{
+            color: '#d63384',
+            fontSize: '1.8rem',
+            marginBottom: '10px',
+            fontFamily: 'Georgia, serif'
+          }}>
+            Virtual Cat Hug
+          </h2>
+          <p style={{
+            color: '#666',
+            fontSize: '1rem',
+            lineHeight: '1.6'
+          }}>
+            Sending you the softest, furriest hug! 🤗🐾
+          </p>
+        </div>
+
+        {/* Virtual Kiss Button */}
+        <div style={{
+          padding: '40px',
+          background: 'linear-gradient(135deg, #fff0f5 0%, #ffe8f0 100%)',
+          borderRadius: '20px',
+          boxShadow: '0 8px 30px rgba(214, 51, 132, 0.3)',
+          textAlign: 'center',
+          border: '3px solid #d63384',
+          cursor: 'pointer',
+          transition: 'transform 0.2s, box-shadow 0.2s'
+        }}
+        onClick={() => {
+          alert('😽 *Mwah!* Little kitty kisses for you! Missing you so much! Can\'t wait to see you! 💋🐾💕');
+        }}
+        onMouseOver={(e) => {
+          e.currentTarget.style.transform = 'scale(1.02)';
+          e.currentTarget.style.boxShadow = '0 10px 40px rgba(214, 51, 132, 0.5)';
+        }}
+        onMouseOut={(e) => {
+          e.currentTarget.style.transform = 'scale(1)';
+          e.currentTarget.style.boxShadow = '0 8px 30px rgba(214, 51, 132, 0.3)';
+        }}
+        >
+          <div style={{fontSize: '4rem', marginBottom: '15px'}}>😽</div>
+          <h2 style={{
+            color: '#d63384',
+            fontSize: '1.8rem',
+            marginBottom: '10px',
+            fontFamily: 'Georgia, serif'
+          }}>
+            Virtual Cat Kiss
+          </h2>
+          <p style={{
+            color: '#666',
+            fontSize: '1rem',
+            lineHeight: '1.6'
+          }}>
+            A thousand little kitty kisses! 💋😸
+          </p>
+        </div>
+      </div>
+
       <div style={{maxWidth: '900px', margin: '0 auto 20px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', position: 'relative', zIndex: 2}}>
         <div style={{backgroundColor: '#fff', padding: '30px', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)', textAlign: 'center', position: 'relative'}}>
           {!isRestaurantSpinnerUnlocked() && (
