@@ -626,8 +626,8 @@ const AnniversaryCalendar = () => {
           </div>
 
           {/* Center table */}
-          <div>
-            <table style={{width: '100%', borderCollapse: 'collapse'}}>
+          <div style={{margin: 0, padding: 0}}>
+            <table style={{width: '100%', borderCollapse: 'collapse', marginBottom: 0}}>
               <thead>
                 <tr>
                   <th style={{border: '1px solid #ddd', padding: '12px', textAlign: 'left', backgroundColor: '#f2f2f2', width: '140px'}}>Photo</th>
