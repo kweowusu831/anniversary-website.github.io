@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Heart, Lock, Calendar, Music, BookOpen, Sparkles, MessageCircle, Mountain, Star, Compass, Infinity, Gift, Utensils } from 'lucide-react';
 
 const AnniversaryCalendar = () => {
@@ -190,27 +190,27 @@ const AnniversaryCalendar = () => {
     { day: 18, date: "January 18th", title: "My Promise: Forever", subtitle: "Promises for Our Future", icon: Infinity, bgColor: "#fce4ec", imageUrl: "/photos/collage/image18.jpeg", content: { message: "I promise to choose you, every single day, for the rest of my life...", note: "Through every season, every challenge, every joy - it will always be you. Forever and always.", extraPhotos: [] }}
   ];
 
-  const DayDetail = ({ day }) => {
+  const DayDetail = React.memo(({ day }) => {
     const Icon = day.icon;
     const [responseText, setResponseText] = useState(responses[day.day] || '');
     const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0);
 
-    const handleSaveResponse = () => {
+    const handleSaveResponse = useCallback(() => {
       saveResponse(day.day, responseText);
       alert('Your response has been saved! 💕');
-    };
+    }, [day.day, responseText]);
 
-    const nextPhoto = () => {
+    const nextPhoto = useCallback(() => {
       if (day.content.extraPhotos && day.content.extraPhotos.length > 0) {
         setCurrentPhotoIndex((prev) => (prev + 1) % day.content.extraPhotos.length);
       }
-    };
+    }, [day.content.extraPhotos]);
 
-    const prevPhoto = () => {
+    const prevPhoto = useCallback(() => {
       if (day.content.extraPhotos && day.content.extraPhotos.length > 0) {
         setCurrentPhotoIndex((prev) => (prev - 1 + day.content.extraPhotos.length) % day.content.extraPhotos.length);
       }
-    };
+    }, [day.content.extraPhotos]);
 
     return (
       <div 
@@ -245,7 +245,6 @@ const AnniversaryCalendar = () => {
                     backgroundColor: '#000'
                   }}>
                     <img 
-                      key={currentPhotoIndex}
                       src={day.content.extraPhotos[currentPhotoIndex]} 
                       alt={`Memory ${currentPhotoIndex + 1}`} 
                       style={{
@@ -402,7 +401,7 @@ const AnniversaryCalendar = () => {
         </div>
       </div>
     );
-  };
+  });
 
   return (
     <div style={{fontFamily: 'Times New Roman, serif', backgroundColor: '#f9f9f9', minHeight: '100vh', padding: '20px', position: 'relative', overflow: 'hidden'}}>
