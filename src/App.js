@@ -571,7 +571,7 @@ const AnniversaryCalendar = () => {
 
       {/* Locked Message - Shows before January 1st */}
       {!demoMode && !isDateUnlocked(1) && (
-        <div style={{
+        <div className="locked-intro-message" style={{
           textAlign: 'center',
           margin: '0 auto 50px auto',
           padding: '60px 40px',
@@ -885,11 +885,18 @@ const AnniversaryCalendar = () => {
           
           h1 {
             font-size: 2rem !important;
+            padding: 0 10px !important;
+          }
+          
+          header p {
+            font-size: 0.9rem !important;
+            padding: 0 10px !important;
           }
           
           .intro-box {
             padding: 15px !important;
             font-size: 0.9rem !important;
+            margin: 0 10px !important;
           }
           
           table {
@@ -898,10 +905,12 @@ const AnniversaryCalendar = () => {
           
           .table-container {
             overflow-x: auto;
+            margin: 0 10px !important;
           }
           
           .spinner-section {
             grid-template-columns: 1fr !important;
+            padding: 0 10px !important;
           }
         }
 
@@ -934,6 +943,26 @@ const AnniversaryCalendar = () => {
           
           .day-card-modal p {
             font-size: 0.9rem !important;
+          }
+          
+          /* Fix locked intro message on mobile */
+          .locked-intro-message {
+            padding: 30px 20px !important;
+            margin: 0 10px 30px 10px !important;
+            max-width: calc(100vw - 20px) !important;
+          }
+          
+          .locked-intro-message h2 {
+            font-size: 1.5rem !important;
+          }
+          
+          .locked-intro-message p {
+            font-size: 1rem !important;
+          }
+          
+          .locked-intro-message svg {
+            width: 50px !important;
+            height: 50px !important;
           }
         }
       `}</style>
