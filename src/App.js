@@ -13,7 +13,7 @@ const AnniversaryCalendar = () => {
     return saved ? JSON.parse(saved) : {};
   });
 
-  const demoMode = true; // Set to false for production
+  const demoMode = false; // Set to false for production
 
   const saveResponse = (dayNumber, response) => {
     const newResponses = { ...responses, [dayNumber]: response };
@@ -170,7 +170,7 @@ const AnniversaryCalendar = () => {
   };
 
   const days = [
-    { day: 1, date: "January 1st", title: "Thank You", subtitle: "For Two Years of Love", icon: Heart, bgColor: "#ffebcd", imageUrl: "/photos/collage/image1.jpeg", content: { message: "As we approach two years of love, the very first thing I want to say is thank you. Thank you for being there for me all this time and thank you for making me know a love as genuine and true as this one. Every day this year begins with you. I wanted to start 2026 by celebrating us one day at a time until we hit the monument of two years together.", note: "It is honestly crazy to me that we've even hit this point, but I know that God put us here for a reason. Please click through each day as it unlocks. Every moment here is meant to be a piece of my heart shared with you and promises and guarantees for you as we enter into the second year of this everlasting relationship. I love you so much and thank you for being you and being with me.", extraPhotos: ["/photos/collage/image2.jpeg", "/photos/collage/image3.jpeg"] }},
+    { day: 1, date: "January 1st", title: "Thank You", subtitle: "For Two Years of Love", icon: Heart, bgColor: "#ffebcd", imageUrl: "/Photos/Collage/image59.jpeg", content: { message: "As we approach two years of love, the very first thing I want to say is thank you. Thank you for being there for me all this time and thank you for making me know a love as genuine and true as this one. Every day this year begins with you. I wanted to start 2026 by celebrating us one day at a time until we hit the monument of two years together.", note: "It is honestly crazy to me that we've even hit this point, but I know that God put us here for a reason. Please click through each day as it unlocks. Every moment here is meant to be a piece of my heart shared with you and promises and guarantees for you as we enter into the second year of this everlasting relationship. I love you so much and thank you for being you and being with me.", extraPhotos: ["/Photos/Collage/image57.JPEG", "/Photos/Collage/image58.JPEG"] }},
     { day: 2, date: "January 2nd", title: "Our Beginning", subtitle: "How We Started", icon: Sparkles, bgColor: "#e6e6fa", imageUrl: "/photos/collage/image2.jpeg", content: { message: "I still remember the exact moment I knew you were different...", note: "Some moments are so ordinary they become extraordinary. This was ours.", extraPhotos: [] }},
     { day: 3, date: "January 3rd", title: "Inside Jokes", subtitle: "Only We Get This", icon: MessageCircle, bgColor: "#f0fff0", imageUrl: "/photos/collage/image3.jpeg", content: { message: "The language only we speak...", note: "These are the moments that make us us.", extraPhotos: [] }},
     { day: 4, date: "January 4th", title: "What I Did Not Expect", subtitle: "How You Changed Me", icon: Compass, bgColor: "#f5f5dc", imageUrl: "/photos/collage/image4.jpeg", content: { message: "You showed me parts of myself I did not know existed...", note: "Love is not just about finding someone. It is about becoming someone better because of them.", extraPhotos: [] }},
