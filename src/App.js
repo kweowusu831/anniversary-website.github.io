@@ -214,7 +214,7 @@ const AnniversaryCalendar = () => {
 
     return (
       <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 z-50" style={{overflowY: 'auto'}}>
-        <div className="bg-white rounded-lg max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl">
+        <div className="day-card-modal bg-white rounded-lg max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl">
           <div className="relative h-48 overflow-hidden" style={{backgroundColor: day.bgColor}}>
             <button onClick={() => setSelectedDay(null)} className="absolute top-4 right-4 text-gray-700 hover:text-gray-900 text-3xl w-10 h-10 flex items-center justify-center bg-white/50 rounded-full">×</button>
             <Icon className="w-12 h-12 mb-3" style={{position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)'}} />
@@ -916,15 +916,24 @@ const AnniversaryCalendar = () => {
             height: 20px !important;
           }
           
-          /* Fix modal on mobile to show content properly */
-          .fixed.inset-0 {
-            align-items: flex-start !important;
-            padding: 10px !important;
+          /* Fix day card modal on mobile */
+          .day-card-modal {
+            max-height: 80vh !important;
+            margin: 10px !important;
+            width: calc(100vw - 20px) !important;
+            max-width: 100% !important;
           }
           
-          .bg-white.rounded-lg {
-            max-height: 85vh !important;
-            margin-top: 20px !important;
+          .day-card-modal .p-8 {
+            padding: 20px !important;
+          }
+          
+          .day-card-modal h2 {
+            font-size: 1.5rem !important;
+          }
+          
+          .day-card-modal p {
+            font-size: 0.9rem !important;
           }
         }
       `}</style>
