@@ -216,11 +216,9 @@ const AnniversaryCalendar = () => {
       <div 
         className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 z-50" 
         style={{overflowY: 'auto'}}
-        onClick={() => setSelectedDay(null)}
       >
         <div 
           className="day-card-modal bg-white rounded-lg max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl"
-          onClick={(e) => e.stopPropagation()}
         >
           <div className="relative h-48 overflow-hidden" style={{backgroundColor: day.bgColor}}>
             <button onClick={() => setSelectedDay(null)} className="absolute top-4 right-4 text-gray-700 hover:text-gray-900 text-3xl w-10 h-10 flex items-center justify-center bg-white/50 rounded-full">×</button>
@@ -261,10 +259,7 @@ const AnniversaryCalendar = () => {
                   {/* Previous Button */}
                   {day.content.extraPhotos.length > 1 && (
                     <button
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        prevPhoto();
-                      }}
+                      onClick={prevPhoto}
                       style={{
                         position: 'absolute',
                         left: '10px',
@@ -292,10 +287,7 @@ const AnniversaryCalendar = () => {
                   {/* Next Button */}
                   {day.content.extraPhotos.length > 1 && (
                     <button
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        nextPhoto();
-                      }}
+                      onClick={nextPhoto}
                       style={{
                         position: 'absolute',
                         right: '10px',
@@ -371,8 +363,8 @@ const AnniversaryCalendar = () => {
               <textarea
                 value={responseText}
                 onChange={(e) => setResponseText(e.target.value)}
-                onClick={(e) => e.stopPropagation()}
                 placeholder="Write your response here..."
+                autoFocus={false}
                 style={{
                   width: '100%',
                   minHeight: '120px',
@@ -385,10 +377,7 @@ const AnniversaryCalendar = () => {
                 }}
               />
               <button
-                onClick={(e) => {
-                  e.stopPropagation();
-                  handleSaveResponse();
-                }}
+                onClick={handleSaveResponse}
                 style={{
                   marginTop: '15px',
                   backgroundColor: '#ff69b4',
