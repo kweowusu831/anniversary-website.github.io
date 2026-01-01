@@ -655,12 +655,20 @@ const AnniversaryCalendar = () => {
                   const isUnlocked = isDateUnlocked(day.day);
                   const Icon = day.icon;
                   return (
-                    <tr key={day.day} style={{backgroundColor: day.bgColor, position: 'relative'}}>
-                      {!isUnlocked && (
-                        <td colSpan="2" style={{position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, zIndex: 10, pointerEvents: 'none'}}>
+                    <tr key={day.day} style={{backgroundColor: day.bgColor}}>
+                      <td style={{border: '1px solid #ddd', padding: '12px', verticalAlign: 'top'}}>
+                        <div style={{position: 'relative', width: '120px'}}>
+                          <img src={day.imageUrl} alt={`Day ${day.day}`} style={{width: '120px', height: '120px', objectFit: 'cover', borderRadius: '5px'}} />
+                        </div>
+                      </td>
+                      <td style={{border: '1px solid #ddd', padding: '16px', position: 'relative'}}>
+                        {!isUnlocked && (
                           <div style={{
-                            width: '100%',
-                            height: '100%',
+                            position: 'absolute',
+                            top: 0,
+                            left: 0,
+                            right: 0,
+                            bottom: 0,
                             backdropFilter: 'blur(12px)',
                             WebkitBackdropFilter: 'blur(12px)',
                             backgroundColor: 'rgba(0,0,0,0.3)',
@@ -669,21 +677,15 @@ const AnniversaryCalendar = () => {
                             justifyContent: 'center',
                             flexDirection: 'column',
                             gap: '10px',
-                            maxHeight: '150px'
+                            zIndex: 10,
+                            borderRadius: '5px'
                           }}>
-                            <Lock style={{color: 'white', width: '30px', height: '30px'}} />
-                            <span style={{color: 'white', fontSize: '0.9rem', fontWeight: 'bold'}}>
+                            <Lock style={{color: 'white', width: '50px', height: '50px'}} />
+                            <span style={{color: 'white', fontSize: '1.1rem', fontWeight: 'bold'}}>
                               Unlocks on {day.date}
                             </span>
                           </div>
-                        </td>
-                      )}
-                      <td style={{border: '1px solid #ddd', padding: '12px', verticalAlign: 'top'}}>
-                        <div style={{position: 'relative', width: '120px'}}>
-                          <img src={day.imageUrl} alt={`Day ${day.day}`} style={{width: '120px', height: '120px', objectFit: 'cover', borderRadius: '5px'}} />
-                        </div>
-                      </td>
-                      <td style={{border: '1px solid #ddd', padding: '16px'}}>
+                        )}
                         <div style={{display: 'flex', alignItems: 'start', gap: '12px'}}>
                           <Icon style={{width: '28px', height: '28px', color: '#8B4513', flexShrink: 0, marginTop: '2px'}} />
                           <div style={{flex: 1}}>
