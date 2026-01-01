@@ -713,7 +713,7 @@ const AnniversaryCalendar = () => {
         </div>
       </div>
 
-      <div style={{maxWidth: '900px', margin: '20px auto 20px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', position: 'relative', zIndex: 2}}>
+      <div style={{maxWidth: '900px', margin: '0 auto 20px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', position: 'relative', zIndex: 2}}>
         <div style={{backgroundColor: '#fff', padding: '30px', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)', textAlign: 'center', position: 'relative'}}>
           {!isRestaurantSpinnerUnlocked() && (
             <div style={{
