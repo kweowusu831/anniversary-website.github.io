@@ -150,7 +150,39 @@ const AnniversaryCalendar = () => {
 
   const days = [
     { day: 1, date: "January 1st", title: "Thank You", subtitle: "For Two Years of Love", icon: Heart, bgColor: "#ffebcd", imageUrl: "/Photos/Collage/image59.jpeg", content: { message: "As we approach two years of love, the very first thing I want to say is thank you. Thank you for being there for me all this time and thank you for making me know a love as genuine and true as this one. Every day this year begins with you. I wanted to start 2026 by celebrating us one day at a time until we hit the monument of two years together.", note: "It is honestly crazy to me that we've even hit this point, but I know that God put us here for a reason. Please click through each day as it unlocks. Every moment here is meant to be a piece of my heart shared with you and promises and guarantees for you as we enter into the second year of this everlasting relationship. I love you so much and thank you for being you and being with me.", extraPhotos: ["/Photos/Collage/image57.JPEG", "/Photos/Collage/image58.JPEG"] }},
-    { day: 2, date: "January 2nd", title: "Our Beginning", subtitle: "How We Started", icon: Sparkles, bgColor: "#e6e6fa", imageUrl: "/photos/collage/image2.jpeg", content: { message: "I still remember the exact moment I knew you were different...", note: "Some moments are so ordinary they become extraordinary. This was ours.", extraPhotos: [] }},
+    { day: 2, date: "January 2nd", title: "Our Beginning", subtitle: "How We Started", icon: Sparkles, bgColor: "#e6e6fa", imageUrl: "/Photos/Collage/image60.jpeg", content: { 
+      message: "When I first met you, I was truly taken aback. Your beauty was impossible to deny, especially your smile. I thought I was the biggest flirt in the world until I met you, and then I quickly realized how wrong I was. You made me nervous in a way I had never experienced before, and that was something I could not ignore.\n\nI liked you so much, and although it didn't hurt when you said you wanted to be friends, it made me determined. I wanted to use that time to get to know you better, even though my feelings were already there. I wanted you to see just how much you meant to me. Looking back at our messages gave me time to reflect, and I realized that everything I wanted to do for you, I truly did. I cared more than I even knew at the time.", 
+      note: "I didn't fully understand how deeply I felt until I read my own words again. If I could go back, I don't think I would change much, except that I would tell you how beautiful you were the very first moment I met you. You were someone I was instantly drawn to, someone I genuinely wanted to know. I will never forget meeting you because it was the moment I learned what it feels like to be drawn to someone before you even realize what is happening.\n\nI was vulnerable with you from the beginning, not just because I wanted you to like me or see the good in me, but because I wanted you to truly see me. I also wanted to see you, fully and honestly. Today, I want us to look back on where we started and appreciate how a simple connection grew into a friendship, and then into a love that is steady, meaningful, and unconditional.", 
+      extraPhotos: [
+        "/Photos/Collage/image87.jpeg",
+        "/Photos/Collage/image61.jpeg",
+        "/Photos/Collage/image62.jpeg",
+        "/Photos/Collage/image63.jpeg",
+        "/Photos/Collage/image64.jpeg",
+        "/Photos/Collage/image65.jpeg",
+        "/Photos/Collage/image66.jpeg",
+        "/Photos/Collage/image67.jpeg",
+        "/Photos/Collage/image68.jpeg",
+        "/Photos/Collage/image69.jpeg",
+        "/Photos/Collage/image70.jpeg",
+        "/Photos/Collage/image71.jpeg",
+        "/Photos/Collage/image72.jpeg",
+        "/Photos/Collage/image73.jpeg",
+        "/Photos/Collage/image74.jpeg",
+        "/Photos/Collage/image75.jpeg",
+        "/Photos/Collage/image76.jpeg",
+        "/Photos/Collage/image77.jpeg",
+        "/Photos/Collage/image78.jpeg",
+        "/Photos/Collage/image79.jpeg",
+        "/Photos/Collage/image80.jpeg",
+        "/Photos/Collage/image81.jpeg",
+        "/Photos/Collage/image82.jpeg",
+        "/Photos/Collage/image83.jpeg",
+        "/Photos/Collage/image84.jpeg",
+        "/Photos/Collage/image85.jpeg",
+        "/Photos/Collage/image86.jpeg"
+      ] 
+    }},
     { day: 3, date: "January 3rd", title: "Inside Jokes", subtitle: "Only We Get This", icon: MessageCircle, bgColor: "#f0fff0", imageUrl: "/photos/collage/image3.jpeg", content: { message: "The language only we speak...", note: "These are the moments that make us us.", extraPhotos: [] }},
     { day: 4, date: "January 4th", title: "What I Did Not Expect", subtitle: "How You Changed Me", icon: Compass, bgColor: "#f5f5dc", imageUrl: "/photos/collage/image4.jpeg", content: { message: "You showed me parts of myself I did not know existed...", note: "Love is not just about finding someone. It is about becoming someone better because of them.", extraPhotos: [] }},
     { day: 5, date: "January 5th", title: "The Little Things", subtitle: "What Makes My Day", icon: Star, bgColor: "#ffe4e1", imageUrl: "/photos/collage/image5.jpeg", content: { message: "It is never the big gestures. It is always been these...", note: "You do not even realize how much these matter. But they are everything.", extraPhotos: [] }},
@@ -947,6 +979,15 @@ const AnniversaryCalendar = () => {
           }
         }
 
+        @keyframes floatHeart {
+          0%, 100% {
+            transform: translateY(0);
+          }
+          50% {
+            transform: translateY(-10px);
+          }
+        }
+
         /* Mobile Responsive */
         @media (max-width: 768px) {
           .photo-row-top,
@@ -1052,6 +1093,73 @@ const AnniversaryCalendar = () => {
           }
         }
       `}</style>
+
+      {/* Sweet Footer Message */}
+      <div style={{
+        maxWidth: '800px',
+        margin: '50px auto 40px',
+        padding: '50px 40px',
+        background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)',
+        borderRadius: '20px',
+        boxShadow: '0 10px 40px rgba(0,0,0,0.3)',
+        border: '3px solid #ff69b4',
+        textAlign: 'center',
+        position: 'relative',
+        zIndex: 2
+      }}>
+        <div style={{marginBottom: '20px'}}>
+          <Heart style={{color: '#ff69b4', width: '60px', height: '60px', display: 'inline-block'}} />
+        </div>
+        <h2 style={{
+          color: '#fff',
+          fontSize: '2.5rem',
+          marginBottom: '20px',
+          fontFamily: 'Georgia, serif',
+          lineHeight: '1.4'
+        }}>
+          Two Years Down, Forever to Go
+        </h2>
+        <p style={{
+          color: '#ffe4e8',
+          fontSize: '1.2rem',
+          lineHeight: '1.8',
+          marginBottom: '20px'
+        }}>
+          Thank you for being my person, my best friend, and the love of my life. Every single day with you is a blessing, and I can't wait to spend the rest of my life making more memories with you.
+        </p>
+        <p style={{
+          color: '#ff69b4',
+          fontSize: '1.4rem',
+          fontWeight: 'bold',
+          fontStyle: 'italic',
+          marginBottom: '15px'
+        }}>
+          I love you more than words can say 💕
+        </p>
+        <p style={{
+          color: '#ffe4e8',
+          fontSize: '1rem',
+          marginTop: '30px'
+        }}>
+          Forever yours,<br/>
+          <span style={{color: '#ff69b4', fontSize: '1.2rem', fontWeight: 'bold'}}>Barron</span>
+        </p>
+        <div style={{marginTop: '25px'}}>
+          <div style={{display: 'inline-block'}}>
+            {'💕 ❤️ 💖 💗 💓 💕'.split(' ').map((emoji, i) => (
+              <span key={i} style={{
+                fontSize: '1.5rem',
+                margin: '0 5px',
+                display: 'inline-block',
+                animation: `floatHeart ${2 + i * 0.2}s ease-in-out infinite`,
+                animationDelay: `${i * 0.3}s`
+              }}>
+                {emoji}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
