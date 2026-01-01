@@ -657,7 +657,7 @@ const AnniversaryCalendar = () => {
                   return (
                     <tr key={day.day} style={{backgroundColor: day.bgColor, position: 'relative'}}>
                       {!isUnlocked && (
-                        <td colSpan="2" style={{position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, zIndex: 10}}>
+                        <td colSpan="2" style={{position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, zIndex: 10, pointerEvents: 'none'}}>
                           <div style={{
                             width: '100%',
                             height: '100%',
@@ -668,10 +668,11 @@ const AnniversaryCalendar = () => {
                             alignItems: 'center',
                             justifyContent: 'center',
                             flexDirection: 'column',
-                            gap: '10px'
+                            gap: '10px',
+                            maxHeight: '150px'
                           }}>
-                            <Lock style={{color: 'white', width: '50px', height: '50px'}} />
-                            <span style={{color: 'white', fontSize: '1.1rem', fontWeight: 'bold'}}>
+                            <Lock style={{color: 'white', width: '30px', height: '30px'}} />
+                            <span style={{color: 'white', fontSize: '0.9rem', fontWeight: 'bold'}}>
                               Unlocks on {day.date}
                             </span>
                           </div>
@@ -903,9 +904,15 @@ const AnniversaryCalendar = () => {
             font-size: 0.85rem !important;
           }
           
+          table tr {
+            position: relative !important;
+            overflow: hidden !important;
+          }
+          
           .table-container {
             overflow-x: auto;
             margin: 0 10px !important;
+            position: relative !important;
           }
           
           .spinner-section {
