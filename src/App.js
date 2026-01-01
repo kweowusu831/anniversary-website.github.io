@@ -915,6 +915,17 @@ const AnniversaryCalendar = () => {
             width: 20px !important;
             height: 20px !important;
           }
+          
+          /* Fix modal on mobile to show content properly */
+          .fixed.inset-0 {
+            align-items: flex-start !important;
+            padding: 10px !important;
+          }
+          
+          .bg-white.rounded-lg {
+            max-height: 85vh !important;
+            margin-top: 20px !important;
+          }
         }
       `}</style>
     </div>
