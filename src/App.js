@@ -3,6 +3,7 @@ import { Heart, Lock, Calendar, Music, BookOpen, Sparkles, MessageCircle, Mounta
 
 const AnniversaryCalendar = () => {
   const [selectedDay, setSelectedDay] = useState(null);
+  const [showAdminPanel, setShowAdminPanel] = useState(false);
   const [spinnerResult, setSpinnerResult] = useState(null);
   const [isSpinning, setIsSpinning] = useState(false);
   const [favorResult, setFavorResult] = useState(null);
@@ -45,6 +46,33 @@ const AnniversaryCalendar = () => {
   // Fireworks effect - DISABLED
   useEffect(() => {
     // Fireworks disabled to prevent re-render issues
+  }, []);
+
+  // Admin panel keyboard shortcut - Shift + A + D + M
+  useEffect(() => {
+    const pressedKeys = new Set();
+    
+    const handleKeyDown = (e) => {
+      pressedKeys.add(e.key.toLowerCase());
+      
+      // Check if Shift + A + D + M are all pressed
+      if (e.shiftKey && pressedKeys.has('a') && pressedKeys.has('d') && pressedKeys.has('m')) {
+        setShowAdminPanel(true);
+        pressedKeys.clear();
+      }
+    };
+    
+    const handleKeyUp = (e) => {
+      pressedKeys.delete(e.key.toLowerCase());
+    };
+    
+    window.addEventListener('keydown', handleKeyDown);
+    window.addEventListener('keyup', handleKeyUp);
+    
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+      window.removeEventListener('keyup', handleKeyUp);
+    };
   }, []);
 
   const collagePhotos = [
@@ -949,6 +977,142 @@ const AnniversaryCalendar = () => {
       </footer>
 
       {selectedDay && <DayDetail day={selectedDay} />}
+
+      {/* Admin Panel - Secret Access */}
+      {showAdminPanel && (
+        <div 
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            backgroundColor: 'rgba(0,0,0,0.8)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            zIndex: 9999,
+            padding: '20px'
+          }}
+          onClick={() => setShowAdminPanel(false)}
+        >
+          <div 
+            style={{
+              backgroundColor: '#fff',
+              borderRadius: '20px',
+              padding: '40px',
+              maxWidth: '800px',
+              maxHeight: '80vh',
+              overflow: 'auto',
+              boxShadow: '0 20px 60px rgba(0,0,0,0.5)',
+              width: '100%'
+            }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '30px'}}>
+              <h2 style={{margin: 0, color: '#333', fontSize: '2rem'}}>🔐 Admin Panel</h2>
+              <button 
+                onClick={() => setShowAdminPanel(false)}
+                style={{
+                  background: 'none',
+                  border: 'none',
+                  fontSize: '2rem',
+                  cursor: 'pointer',
+                  color: '#666'
+                }}
+              >
+                ×
+              </button>
+            </div>
+            
+            <div style={{marginBottom: '20px', padding: '15px', backgroundColor: '#f0f0f0', borderRadius: '10px'}}>
+              <p style={{margin: 0, color: '#666', fontSize: '0.9rem'}}>
+                📊 Total Responses: {Object.keys(responses).length}
+              </p>
+            </div>
+
+            {Object.keys(responses).length === 0 ? (
+              <div style={{textAlign: 'center', padding: '40px', color: '#999'}}>
+                <p style={{fontSize: '1.2rem'}}>No responses yet</p>
+                <p style={{fontSize: '0.9rem'}}>Sandrine hasn't written any responses yet!</p>
+              </div>
+            ) : (
+              <div style={{display: 'flex', flexDirection: 'column', gap: '20px'}}>
+                {Object.keys(responses).sort((a, b) => Number(a) - Number(b)).map(dayNum => {
+                  const day = days.find(d => d.day === Number(dayNum));
+                  return (
+                    <div 
+                      key={dayNum}
+                      style={{
+                        padding: '20px',
+                        backgroundColor: day ? day.bgColor : '#f9f9f9',
+                        borderRadius: '12px',
+                        border: '2px solid #ddd'
+                      }}
+                    >
+                      <div style={{display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '10px'}}>
+                        {day && <day.icon style={{width: '24px', height: '24px', color: '#ff69b4'}} />}
+                        <h3 style={{margin: 0, color: '#333', fontSize: '1.3rem'}}>
+                          Day {dayNum} - {day ? day.title : 'Unknown'}
+                        </h3>
+                      </div>
+                      <div style={{
+                        padding: '15px',
+                        backgroundColor: '#fff',
+                        borderRadius: '8px',
+                        border: '1px solid #ddd'
+                      }}>
+                        <p style={{
+                          margin: 0,
+                          color: '#555',
+                          whiteSpace: 'pre-wrap',
+                          lineHeight: '1.6',
+                          fontSize: '1rem'
+                        }}>
+                          {responses[dayNum]}
+                        </p>
+                      </div>
+                      <p style={{
+                        margin: '10px 0 0 0',
+                        color: '#999',
+                        fontSize: '0.85rem'
+                      }}>
+                        Written on {day ? day.date : `Day ${dayNum}`}
+                      </p>
+                    </div>
+                  );
+                })}
+              </div>
+            )}
+
+            <div style={{marginTop: '30px', textAlign: 'center'}}>
+              <button
+                onClick={() => {
+                  const data = JSON.stringify(responses, null, 2);
+                  const blob = new Blob([data], { type: 'application/json' });
+                  const url = URL.createObjectURL(blob);
+                  const a = document.createElement('a');
+                  a.href = url;
+                  a.download = 'sandrine-responses.json';
+                  a.click();
+                }}
+                style={{
+                  backgroundColor: '#ff69b4',
+                  color: '#fff',
+                  border: 'none',
+                  padding: '12px 24px',
+                  borderRadius: '8px',
+                  fontSize: '1rem',
+                  cursor: 'pointer',
+                  fontFamily: 'Times New Roman, serif'
+                }}
+              >
+                📥 Download All Responses
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       <style>{`
         @keyframes fadeInPhoto {
