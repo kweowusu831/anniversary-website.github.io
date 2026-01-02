@@ -211,7 +211,32 @@ const AnniversaryCalendar = () => {
         "/Photos/Collage/image61.jpeg"
       ] 
     }},
-    { day: 3, date: "January 3rd", title: "Inside Jokes", subtitle: "Only We Get This", icon: MessageCircle, bgColor: "#f0fff0", imageUrl: "/Photos/Collage/dayplaceholder.jpeg", content: { message: "The language only we speak...", note: "These are the moments that make us us.", extraPhotos: [] }},
+    { day: 3, date: "January 3rd", title: "When I Knew", subtitle: "The Moment I Realized", icon: Heart, bgColor: "#f0fff0", imageUrl: "/Photos/Collage/image97.jpeg", content: { 
+      message: "Love is something that some say has a timeline, and others say you know when you know. I personally believe that the latter is true. I found myself loving you before I was consciously aware of it, like my heart understood what my mind had not yet accepted.\n\nI will never forget when I came home for Winter Break and we were on the phone. It was such a simple conversation, nothing extraordinary, nothing scripted, but I found my heart yearning for you, especially after our first date. I was so happy to hear your voice. It felt like home. I found myself thinking over and over about how much I cared about you, how much I missed you, and how desperately I wanted you to be mine.\n\nThen it happened. I blurted out \"I love you\" while we were on the phone, and immediately, I began to panic. My heart was racing. I was so scared and genuinely thought everything was over because of that one small slip. But one thing I did not do was regret it. I kept replaying it in my mind. Did I really say that? Did I mean it? But after thinking about it for hours, days, and weeks, one thing stood true: how I felt. I loved you, and that was the one thing I did not feel confused about or want to deny.", 
+      note: "It was worth it. I am so glad I said what I said because it was the truth, and you deserved to know it. Getting to spend time with you on the phone, seeing you try out cute outfits and ask for my opinion, seeing you drunk and calling me while you were in ATL, it all meant so much to me. Every moment made my year end that much better, that much sweeter, and that much more meaningful.\n\nThat was the moment I knew. Not because it was perfect, but because it was real. And I would not change a single thing about it.", 
+      extraPhotos: [
+        "/Photos/Collage/image88.jpeg",
+        "/Photos/Collage/image89.jpeg",
+        "/Photos/Collage/image90.jpeg",
+        "/Photos/Collage/image91.jpeg",
+        "/Photos/Collage/image92.jpeg",
+        "/Photos/Collage/image93.jpeg",
+        "/Photos/Collage/image94.jpeg",
+        "/Photos/Collage/image95.jpeg",
+        "/Photos/Collage/image96.jpeg",
+        "/Photos/Collage/image97.jpeg",
+        "/Photos/Collage/image98.jpeg",
+        "/Photos/Collage/image99.jpeg",
+        "/Photos/Collage/image100.jpeg",
+        "/Photos/Collage/image101.jpeg",
+        "/Photos/Collage/image102.jpeg",
+        "/Photos/Collage/image103.jpeg",
+        "/Photos/Collage/image104.jpeg",
+        "/Photos/Collage/image105.jpeg",
+        "/Photos/Collage/image106.jpeg",
+        "/Photos/Collage/image107.jpeg"
+      ] 
+    }},
     { day: 4, date: "January 4th", title: "What I Did Not Expect", subtitle: "How You Changed Me", icon: Compass, bgColor: "#f5f5dc", imageUrl: "/Photos/Collage/dayplaceholder.jpeg", content: { message: "You showed me parts of myself I did not know existed...", note: "Love is not just about finding someone. It is about becoming someone better because of them.", extraPhotos: [] }},
     { day: 5, date: "January 5th", title: "The Little Things", subtitle: "What Makes My Day", icon: Star, bgColor: "#ffe4e1", imageUrl: "/Photos/Collage/dayplaceholder.jpeg", content: { message: "It is never the big gestures. It is always been these...", note: "You do not even realize how much these matter. But they are everything.", extraPhotos: [] }},
     { day: 6, date: "January 6th", title: "The Hard Days", subtitle: "How We Grew", icon: Mountain, bgColor: "#fff0f5", imageUrl: "/Photos/Collage/dayplaceholder.jpeg", content: { message: "Love is not just sunshine. It is choosing each other even when it is hard...", note: "The fact that we are here stronger than before means everything.", extraPhotos: [] }},
