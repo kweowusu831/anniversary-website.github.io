@@ -14,12 +14,35 @@ const AnniversaryCalendar = () => {
     return saved ? JSON.parse(saved) : {};
   });
 
+  // Initialize EmailJS
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js';
+    script.onload = () => {
+      window.emailjs.init('LfcnuiXbLAAfIiaVs');
+    };
+    document.body.appendChild(script);
+  }, []);
+
   const demoMode = false; // Set to false for production
 
-  const saveResponse = (dayNumber, response) => {
+  const saveResponse = (dayNumber, response, dayTitle, dayDate) => {
     const newResponses = { ...responses, [dayNumber]: response };
     setResponses(newResponses);
     localStorage.setItem('dayResponses', JSON.stringify(newResponses));
+    
+    // Send email notification
+    if (window.emailjs) {
+      window.emailjs.send('service_bzpdvam', 'template_3tzuwey', {
+        day_number: dayNumber,
+        day_title: dayTitle,
+        day_date: dayDate,
+        response_text: response
+      }).then(
+        () => console.log('Email sent successfully!'),
+        (error) => console.log('Email failed:', error)
+      );
+    }
   };
 
   const isDateUnlocked = (dayNumber) => {
@@ -211,7 +234,7 @@ const AnniversaryCalendar = () => {
         "/Photos/Collage/image61.jpeg"
       ] 
     }},
-    { day: 3, date: "January 3rd", title: "When I Knew", subtitle: "The Moment I Realized", icon: Heart, bgColor: "#f0fff0", imageUrl: "/Photos/Collage/image93.jpeg", content: { 
+    { day: 3, date: "January 3rd", title: "When I Knew", subtitle: "The Moment I Realized", icon: Heart, bgColor: "#f0fff0", imageUrl: "/Photos/Collage/image97.jpeg", content: { 
       message: "Love is something that some say has a timeline, and others say you know when you know. I personally believe that the latter is true. I found myself loving you before I was consciously aware of it, like my heart understood what my mind had not yet accepted.\n\nI will never forget when I came home for Winter Break and we were on the phone. It was such a simple conversation, nothing extraordinary, nothing scripted, but I found my heart yearning for you, especially after our first date. I was so happy to hear your voice. It felt like home. I found myself thinking over and over about how much I cared about you, how much I missed you, and how desperately I wanted you to be mine.\n\nThen it happened. I blurted out \"I love you\" while we were on the phone, and immediately, I began to panic. My heart was racing. I was so scared and genuinely thought everything was over because of that one small slip. But one thing I did not do was regret it. I kept replaying it in my mind. Did I really say that? Did I mean it? But after thinking about it for hours, days, and weeks, one thing stood true: how I felt. I loved you, and that was the one thing I did not feel confused about or want to deny.", 
       note: "It was worth it. I am so glad I said what I said because it was the truth, and you deserved to know it. Getting to spend time with you on the phone, seeing you try out cute outfits and ask for my opinion, seeing you drunk and calling me while you were in ATL, it all meant so much to me. Every moment made my year end that much better, that much sweeter, and that much more meaningful.\n\nThat was the moment I knew. Not because it was perfect, but because it was real. And I would not change a single thing about it.", 
       extraPhotos: [
@@ -220,6 +243,7 @@ const AnniversaryCalendar = () => {
         "/Photos/Collage/image90.jpeg",
         "/Photos/Collage/image91.jpeg",
         "/Photos/Collage/image92.jpeg",
+        "/Photos/Collage/image93.jpeg",
         "/Photos/Collage/image94.jpeg",
         "/Photos/Collage/image95.jpeg",
         "/Photos/Collage/image96.jpeg",
@@ -236,7 +260,50 @@ const AnniversaryCalendar = () => {
         "/Photos/Collage/image107.jpeg"
       ] 
     }},
-    { day: 4, date: "January 4th", title: "What I Did Not Expect", subtitle: "How You Changed Me", icon: Compass, bgColor: "#f5f5dc", imageUrl: "/Photos/Collage/dayplaceholder.jpeg", content: { message: "You showed me parts of myself I did not know existed...", note: "Love is not just about finding someone. It is about becoming someone better because of them.", extraPhotos: [] }},
+    { day: 4, date: "January 4th", title: "Our Firsts", subtitle: "Moments That Changed Everything", icon: Sparkles, bgColor: "#f5f5dc", imageUrl: "/Photos/Collage/image113.jpeg", content: { 
+      message: "In the two years we have spent together, we have created so many first memories, and each one holds a piece of my heart. Many of these moments were firsts I had never experienced before you, and because they happened with you, they feel even more sacred. They are not just memories I look back on, they are moments that changed me, moments that taught me what love feels like, and moments that made me realize how deeply I wanted to share my life with you.\n\nI will never forget the first day I met you. From that very moment, it felt as though my entire world shifted. It was subtle yet overwhelming, like my heart already knew something my mind had not caught up to yet. Everything before you suddenly felt distant, and everything after you felt full of possibility. That was the first time I truly felt my life changing for the better without fear, only hope.\n\nYou might find it hard to believe, but one of my firsts with you was caring about social media. I had never been someone who cared about being seen in that way, but after meeting you, it mattered more than I ever expected. I wanted you to notice me. I wanted you to see me, think of me, and choose me. Even if it was only a fraction of how much I wanted you, it meant everything to me. That longing, that quiet hope of being noticed by you, was the first time my heart reached for someone so openly.", 
+      note: "As time passed and we grew closer, the firsts continued to unfold. Our first kiss in Montebello, New York is a memory I will carry with me for the rest of my life. My heart was on fire in that moment, and November 25th became more than just a date. It became the day I realized how powerful a single moment could be when it is shared with the right person. That kiss was not just a first, it was a promise my heart made before my words ever could.\n\nOur first date only deepened everything I was already feeling. It was magical in a way that made me feel safe, excited, and certain all at once. I remember how eager I was to show you what I had always known deep down, how much I cared for you, how real my feelings were. That night felt like the beginning of something I wanted to protect, nurture, and grow with you.\n\nThe first night we spent apart after I asked you to be my girlfriend was another first I never expected to feel so deeply. Being away from you made my heart ache in a way it never had before. It was the first time I realized how much of my happiness was tied to your presence, how your absence could make my heart long so intensely. That yearning showed me just how deeply you had become a part of me.\n\nAll of these firsts are more than memories to me because they belong to us. They are the foundation of our story, the moments that shaped our love and brought us closer with every step. I want to experience every first with you, every new beginning, every memory we have yet to create. I want my life to continue unfolding beside yours, because you are the one I want to experience love, growth, and life with, from our first memories to forever.", 
+      extraPhotos: [
+        "/Photos/Collage/image108.jpeg",
+        "/Photos/Collage/image109.jpeg",
+        "/Photos/Collage/image110.jpeg",
+        "/Photos/Collage/image111.jpeg",
+        "/Photos/Collage/image112.jpeg",
+        "/Photos/Collage/image113.jpeg",
+        "/Photos/Collage/image114.jpeg",
+        "/Photos/Collage/image115.jpeg",
+        "/Photos/Collage/image116.jpeg",
+        "/Photos/Collage/image117.jpeg",
+        "/Photos/Collage/image118.jpeg",
+        "/Photos/Collage/image119.jpeg",
+        "/Photos/Collage/image120.jpeg",
+        "/Photos/Collage/image121.jpeg",
+        "/Photos/Collage/image122.jpeg",
+        "/Photos/Collage/image123.jpeg",
+        "/Photos/Collage/image124.jpeg",
+        "/Photos/Collage/image125.jpeg",
+        "/Photos/Collage/image126.jpeg",
+        "/Photos/Collage/image127.jpeg",
+        "/Photos/Collage/image128.jpeg",
+        "/Photos/Collage/image129.jpeg",
+        "/Photos/Collage/image130.jpeg",
+        "/Photos/Collage/image131.jpeg",
+        "/Photos/Collage/image132.jpeg",
+        "/Photos/Collage/image133.jpeg",
+        "/Photos/Collage/image134.jpeg",
+        "/Photos/Collage/image135.jpeg",
+        "/Photos/Collage/image136.jpeg",
+        "/Photos/Collage/image137.jpeg",
+        "/Photos/Collage/image138.jpeg",
+        "/Photos/Collage/image139.jpeg",
+        "/Photos/Collage/image140.jpeg",
+        "/Photos/Collage/image141.jpeg",
+        "/Photos/Collage/image142.jpeg",
+        "/Photos/Collage/image143.jpeg",
+        "/Photos/Collage/image144.jpeg",
+        "/Photos/Collage/image145.jpeg"
+      ] 
+    }},
     { day: 5, date: "January 5th", title: "The Little Things", subtitle: "What Makes My Day", icon: Star, bgColor: "#ffe4e1", imageUrl: "/Photos/Collage/dayplaceholder.jpeg", content: { message: "It is never the big gestures. It is always been these...", note: "You do not even realize how much these matter. But they are everything.", extraPhotos: [] }},
     { day: 6, date: "January 6th", title: "The Hard Days", subtitle: "How We Grew", icon: Mountain, bgColor: "#fff0f5", imageUrl: "/Photos/Collage/dayplaceholder.jpeg", content: { message: "Love is not just sunshine. It is choosing each other even when it is hard...", note: "The fact that we are here stronger than before means everything.", extraPhotos: [] }},
     { day: 7, date: "January 7th", title: "How You Love Me", subtitle: "The Ways I Feel It", icon: Heart, bgColor: "#faf0e6", imageUrl: "/Photos/Collage/dayplaceholder.jpeg", content: { message: "You show love in a language all your own...", note: "You make me feel loved not just in words but in a thousand quiet ways.", extraPhotos: [] }},
@@ -259,9 +326,9 @@ const AnniversaryCalendar = () => {
     const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0);
 
     const handleSaveResponse = useCallback(() => {
-      saveResponse(day.day, responseText);
+      saveResponse(day.day, responseText, day.title, day.date);
       alert('Your response has been saved! 💕');
-    }, [day.day, responseText]);
+    }, [day.day, day.title, day.date, responseText]);
 
     const nextPhoto = useCallback(() => {
       if (day.content.extraPhotos && day.content.extraPhotos.length > 0) {
