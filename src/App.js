@@ -305,8 +305,8 @@ const AnniversaryCalendar = () => {
       ] 
     }},
     { day: 5, date: "January 5th", title: "Our Soundtrack", subtitle: "Music and What It Means to Us", icon: Music, bgColor: "#ffe4e1", imageUrl: "/Photos/Collage/image147.jpeg", content: { 
-      message: "Music is something that transcends language. It moves beyond words, cultures, and distance, and speaks directly to the heart. It is what I like to call the universal language, one that understands emotion before it is ever spoken. In so many ways, music has always been a part of how I feel, but loving you gave it a deeper meaning than it ever had before.\n\nThroughout this website, you have probably seen just how much I wanted you and how deeply I desired you from the very beginning. So much so that I called you Cinderella early on in our relationship. I did that not only because you are my princess, but because music has always been the place where love feels the most honest to me. Songs have a way of capturing feelings that my voice sometimes struggles to express. They say what my heart has been holding onto, quietly and sincerely.\n\nI cannot imagine a world without music, because loving you has shown me that love is not just spoken, it is felt in moments, in memories, and in melodies. Music allows me to express my love even when words feel too small. It carries the emotions I feel for you and gives them a place to exist fully.", 
-      note: "Music makes me feel everything. It brings me joy, comfort, longing, and even tears. It opens parts of my heart I did not know how to reach on my own. To me, it is one of the most beautiful things on this planet. And while your beauty is truly indescribable, music is one of the only things I know that even comes close to conveying how precious you are to me.\n\nWhen I hear certain songs, I hear you. I see us. I remember moments, feelings, and firsts that belong only to us. Music has become another way I hold you close, another way I relive what we share. In the same way music stays with me long after the song ends, the love I have for you lingers in every part of my life.", 
+      message: "Music is something that transcends language. It moves beyond words, cultures, and distance, and speaks directly to the heart. It is what I like to call the universal language, one that understands emotion before it is ever spoken. In so many ways, music has always been a part of how I feel, but loving you gave it a deeper meaning than it ever had before.\n\nThroughout this website, you have probably seen just how much I wanted you and how deeply I desired you from the very beginning. So much so that I called you Cinderella early on in our relationship. I did that not only because you are my princess, but because music has always been the place where love feels the most honest to me. Songs have a way of capturing feelings that my voice sometimes struggles to express. They say what my heart has been holding onto, quietly and sincerely.\n\nI cannot imagine a world without music, because loving you has shown me that love is not just spoken, it is felt in moments, in memories, and in melodies. Music allows me to express my love even when words feel too small. It carries the emotions I feel for you and gives them a place to exist fully.\n\nEvery song in our playlist tells a story. Some remind me of the moment I first saw you, the way my heart skipped when you smiled. Others take me back to late nights on the phone, when your voice was the only thing I wanted to hear. Some songs remind me of our first kiss, our first date, the first time I told you I loved you. Each melody is a memory, each lyric a feeling I have carried for you since the beginning.", 
+      note: "Music makes me feel everything. It brings me joy, comfort, longing, and even tears. It opens parts of my heart I did not know how to reach on my own. To me, it is one of the most beautiful things on this planet. And while your beauty is truly indescribable, music is one of the only things I know that even comes close to conveying how precious you are to me.\n\nWhen I hear certain songs, I hear you. I see us. I remember moments, feelings, and firsts that belong only to us. Music has become another way I hold you close, another way I relive what we share. In the same way music stays with me long after the song ends, the love I have for you lingers in every part of my life.\n\nI created this playlist for you because I wanted you to have something that captures how I feel when words are not enough. Every song is a piece of my heart, a moment we shared, or a feeling I have carried for you. When you listen to it, I hope you feel how deeply you are loved. I hope you hear my heart in every note, my love in every lyric, and my devotion in every melody.\n\nThis is our soundtrack, my love. It is the music of us, the rhythm of our love, and the melody of everything we have built together. And just like our love, it will only grow more beautiful with time.", 
       extraPhotos: [
         "/Photos/Collage/image146.jpeg",
         "/Photos/Collage/image147.jpeg",
@@ -589,6 +589,29 @@ const AnniversaryCalendar = () => {
 
   return (
     <div style={{fontFamily: 'Times New Roman, serif', backgroundColor: '#f9f9f9', minHeight: '100vh', padding: '20px', position: 'relative', overflow: 'hidden'}}>
+      {/* Background Music Player - Always Visible */}
+      <div style={{
+        position: 'fixed',
+        bottom: '20px',
+        right: '20px',
+        zIndex: 1000,
+        boxShadow: '0 8px 30px rgba(0,0,0,0.3)',
+        borderRadius: '12px',
+        overflow: 'hidden'
+      }}>
+        <iframe 
+          allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" 
+          frameBorder="0" 
+          height="175" 
+          style={{
+            width: '300px',
+            background: 'transparent'
+          }}
+          sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" 
+          src="https://embed.music.apple.com/us/playlist/cinderella/pl.u-MDAWkADTAzJmjWv"
+        />
+      </div>
+
       {/* Fireworks */}
       {fireworks.map(fw => (
         <div
