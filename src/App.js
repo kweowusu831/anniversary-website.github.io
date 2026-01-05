@@ -234,7 +234,7 @@ const AnniversaryCalendar = () => {
         "/Photos/Collage/image61.jpeg"
       ] 
     }},
-    { day: 3, date: "January 3rd", title: "When I Knew", subtitle: "The Moment I Realized", icon: Heart, bgColor: "#f0fff0", imageUrl: "/Photos/Collage/image97.jpeg", content: { 
+    { day: 3, date: "January 3rd", title: "When I Knew", subtitle: "The Moment I Realized", icon: Heart, bgColor: "#f0fff0", imageUrl: "/Photos/Collage/image172.jpeg", content: { 
       message: "Love is something that some say has a timeline, and others say you know when you know. I personally believe that the latter is true. I found myself loving you before I was consciously aware of it, like my heart understood what my mind had not yet accepted.\n\nI will never forget when I came home for Winter Break and we were on the phone. It was such a simple conversation, nothing extraordinary, nothing scripted, but I found my heart yearning for you, especially after our first date. I was so happy to hear your voice. It felt like home. I found myself thinking over and over about how much I cared about you, how much I missed you, and how desperately I wanted you to be mine.\n\nThen it happened. I blurted out \"I love you\" while we were on the phone, and immediately, I began to panic. My heart was racing. I was so scared and genuinely thought everything was over because of that one small slip. But one thing I did not do was regret it. I kept replaying it in my mind. Did I really say that? Did I mean it? But after thinking about it for hours, days, and weeks, one thing stood true: how I felt. I loved you, and that was the one thing I did not feel confused about or want to deny.", 
       note: "It was worth it. I am so glad I said what I said because it was the truth, and you deserved to know it. Getting to spend time with you on the phone, seeing you try out cute outfits and ask for my opinion, seeing you drunk and calling me while you were in ATL, it all meant so much to me. Every moment made my year end that much better, that much sweeter, and that much more meaningful.\n\nThat was the moment I knew. Not because it was perfect, but because it was real. And I would not change a single thing about it.", 
       extraPhotos: [
@@ -589,29 +589,6 @@ const AnniversaryCalendar = () => {
 
   return (
     <div style={{fontFamily: 'Times New Roman, serif', backgroundColor: '#f9f9f9', minHeight: '100vh', padding: '20px', position: 'relative', overflow: 'hidden'}}>
-      {/* Background Music Player - Always Visible */}
-      <div style={{
-        position: 'fixed',
-        bottom: '20px',
-        right: '20px',
-        zIndex: 1000,
-        boxShadow: '0 8px 30px rgba(0,0,0,0.3)',
-        borderRadius: '12px',
-        overflow: 'hidden'
-      }}>
-        <iframe 
-          allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" 
-          frameBorder="0" 
-          height="175" 
-          style={{
-            width: '300px',
-            background: 'transparent'
-          }}
-          sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" 
-          src="https://embed.music.apple.com/us/playlist/cinderella/pl.u-MDAWkADTAzJmjWv"
-        />
-      </div>
-
       {/* Fireworks */}
       {fireworks.map(fw => (
         <div
@@ -634,6 +611,32 @@ const AnniversaryCalendar = () => {
         <h1 style={{color: '#333', fontSize: '3rem', marginBottom: '10px'}}>13 Days of Us</h1>
         <p style={{color: '#666', fontSize: '1.1rem', margin: 0}}>January 1st - 13th 2026 • Our Two Year Anniversary</p>
       </header>
+
+      {/* Music Player - Below Header */}
+      <div style={{
+        textAlign: 'center',
+        marginBottom: '30px',
+        position: 'relative',
+        zIndex: 2
+      }}>
+        <h3 style={{color: '#ff69b4', fontSize: '1.2rem', marginBottom: '15px'}}>🎵 Our Playlist: Cinderella</h3>
+        <div style={{display: 'flex', justifyContent: 'center'}}>
+          <iframe 
+            allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" 
+            frameBorder="0" 
+            height="175" 
+            style={{
+              width: '100%',
+              maxWidth: '500px',
+              background: 'transparent',
+              borderRadius: '12px',
+              boxShadow: '0 4px 15px rgba(255, 105, 180, 0.3)'
+            }}
+            sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" 
+            src="https://embed.music.apple.com/us/playlist/cinderella/pl.u-MDAWkADTAzJmjWv"
+          />
+        </div>
+      </div>
 
       {/* Special New Year Message - Only shows on/after January 1st */}
       {(demoMode || isDateUnlocked(1)) && (
