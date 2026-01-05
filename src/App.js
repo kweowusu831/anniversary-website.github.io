@@ -234,7 +234,7 @@ const AnniversaryCalendar = () => {
         "/Photos/Collage/image61.jpeg"
       ] 
     }},
-    { day: 3, date: "January 3rd", title: "When I Knew", subtitle: "The Moment I Realized", icon: Heart, bgColor: "#f0fff0", imageUrl: "/Photos/Collage/image172.jpeg", content: { 
+    { day: 3, date: "January 3rd", title: "When I Knew", subtitle: "The Moment I Realized", icon: Heart, bgColor: "#f0fff0", imageUrl: "/Photos/Collage/image97.jpeg", content: { 
       message: "Love is something that some say has a timeline, and others say you know when you know. I personally believe that the latter is true. I found myself loving you before I was consciously aware of it, like my heart understood what my mind had not yet accepted.\n\nI will never forget when I came home for Winter Break and we were on the phone. It was such a simple conversation, nothing extraordinary, nothing scripted, but I found my heart yearning for you, especially after our first date. I was so happy to hear your voice. It felt like home. I found myself thinking over and over about how much I cared about you, how much I missed you, and how desperately I wanted you to be mine.\n\nThen it happened. I blurted out \"I love you\" while we were on the phone, and immediately, I began to panic. My heart was racing. I was so scared and genuinely thought everything was over because of that one small slip. But one thing I did not do was regret it. I kept replaying it in my mind. Did I really say that? Did I mean it? But after thinking about it for hours, days, and weeks, one thing stood true: how I felt. I loved you, and that was the one thing I did not feel confused about or want to deny.", 
       note: "It was worth it. I am so glad I said what I said because it was the truth, and you deserved to know it. Getting to spend time with you on the phone, seeing you try out cute outfits and ask for my opinion, seeing you drunk and calling me while you were in ATL, it all meant so much to me. Every moment made my year end that much better, that much sweeter, and that much more meaningful.\n\nThat was the moment I knew. Not because it was perfect, but because it was real. And I would not change a single thing about it.", 
       extraPhotos: [
@@ -343,12 +343,10 @@ const AnniversaryCalendar = () => {
         "/Photos/Collage/image173.jpeg",
         "/Photos/Collage/image174.jpeg",
         "/Photos/Collage/image175.jpeg",
-        "/Photos/Collage/video1.mp4",
         "/Photos/Collage/image176.jpeg",
         "/Photos/Collage/image177.jpeg",
         "/Photos/Collage/image178.jpeg",
         "/Photos/Collage/image179.jpeg",
-        "/Photos/Collage/video2.mp4",
         "/Photos/Collage/image180.jpeg",
         "/Photos/Collage/image181.jpeg",
         "/Photos/Collage/image182.jpeg",
@@ -420,9 +418,9 @@ const AnniversaryCalendar = () => {
             <Icon className="w-12 h-12 mb-3" style={{position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)'}} />
           </div>
           <div className="p-8">
-            <h2 className="text-3xl font-bold mb-2">Day {day.day} - {day.title}</h2>
-            <p className="text-lg italic mb-4">{day.content.message}</p>
-            <p className="text-gray-600 italic mb-6">{day.content.note}</p>
+            <h2 className="text-3xl font-bold mb-2" style={day.day === 6 ? {fontFamily: 'Georgia, serif'} : {}}>Day {day.day} - {day.title}</h2>
+            <p className="text-lg italic mb-4" style={day.day === 6 ? {fontFamily: 'Georgia, serif', lineHeight: '1.8', fontSize: '1.1rem'} : {}}>{day.content.message}</p>
+            <p className="text-gray-600 italic mb-6" style={day.day === 6 ? {fontFamily: 'Georgia, serif', lineHeight: '1.8', fontSize: '1.05rem'} : {}}>{day.content.note}</p>
 
             {/* Photo Carousel - Before Response Box */}
             {day.content.extraPhotos && day.content.extraPhotos.length > 0 && (
