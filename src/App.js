@@ -304,7 +304,38 @@ const AnniversaryCalendar = () => {
         "/Photos/Collage/image145.jpeg"
       ] 
     }},
-    { day: 5, date: "January 5th", title: "The Little Things", subtitle: "What Makes My Day", icon: Star, bgColor: "#ffe4e1", imageUrl: "/Photos/Collage/dayplaceholder.jpeg", content: { message: "It is never the big gestures. It is always been these...", note: "You do not even realize how much these matter. But they are everything.", extraPhotos: [] }},
+    { day: 5, date: "January 5th", title: "Our Soundtrack", subtitle: "Music and What It Means to Us", icon: Music, bgColor: "#ffe4e1", imageUrl: "/Photos/Collage/image147.jpeg", content: { 
+      message: "Music is something that transcends language. It moves beyond words, cultures, and distance, and speaks directly to the heart. It is what I like to call the universal language, one that understands emotion before it is ever spoken. In so many ways, music has always been a part of how I feel, but loving you gave it a deeper meaning than it ever had before.\n\nThroughout this website, you have probably seen just how much I wanted you and how deeply I desired you from the very beginning. So much so that I called you Cinderella early on in our relationship. I did that not only because you are my princess, but because music has always been the place where love feels the most honest to me. Songs have a way of capturing feelings that my voice sometimes struggles to express. They say what my heart has been holding onto, quietly and sincerely.\n\nI cannot imagine a world without music, because loving you has shown me that love is not just spoken, it is felt in moments, in memories, and in melodies. Music allows me to express my love even when words feel too small. It carries the emotions I feel for you and gives them a place to exist fully.", 
+      note: "Music makes me feel everything. It brings me joy, comfort, longing, and even tears. It opens parts of my heart I did not know how to reach on my own. To me, it is one of the most beautiful things on this planet. And while your beauty is truly indescribable, music is one of the only things I know that even comes close to conveying how precious you are to me.\n\nWhen I hear certain songs, I hear you. I see us. I remember moments, feelings, and firsts that belong only to us. Music has become another way I hold you close, another way I relive what we share. In the same way music stays with me long after the song ends, the love I have for you lingers in every part of my life.", 
+      extraPhotos: [
+        "/Photos/Collage/image146.jpeg",
+        "/Photos/Collage/image147.jpeg",
+        "/Photos/Collage/image148.jpeg",
+        "/Photos/Collage/image149.jpeg",
+        "/Photos/Collage/image150.jpeg",
+        "/Photos/Collage/image151.jpeg",
+        "/Photos/Collage/image152.jpeg",
+        "/Photos/Collage/image153.jpeg",
+        "/Photos/Collage/image154.jpeg",
+        "/Photos/Collage/image155.jpeg",
+        "/Photos/Collage/image156.jpeg",
+        "/Photos/Collage/image157.jpeg",
+        "/Photos/Collage/image158.jpeg",
+        "/Photos/Collage/image159.jpeg",
+        "/Photos/Collage/image160.jpeg",
+        "/Photos/Collage/image161.jpeg",
+        "/Photos/Collage/image162.jpeg",
+        "/Photos/Collage/image163.jpeg",
+        "/Photos/Collage/image164.jpeg",
+        "/Photos/Collage/image165.jpeg",
+        "/Photos/Collage/image166.jpeg",
+        "/Photos/Collage/image167.jpeg",
+        "/Photos/Collage/image168.jpeg",
+        "/Photos/Collage/image169.jpeg",
+        "/Photos/Collage/image170.jpeg"
+      ],
+      appleMusicPlaylist: "https://embed.music.apple.com/us/playlist/cinderella/pl.u-MDAWkADTAzJmjWv"
+    }},
     { day: 6, date: "January 6th", title: "The Hard Days", subtitle: "How We Grew", icon: Mountain, bgColor: "#fff0f5", imageUrl: "/Photos/Collage/dayplaceholder.jpeg", content: { message: "Love is not just sunshine. It is choosing each other even when it is hard...", note: "The fact that we are here stronger than before means everything.", extraPhotos: [] }},
     { day: 7, date: "January 7th", title: "How You Love Me", subtitle: "The Ways I Feel It", icon: Heart, bgColor: "#faf0e6", imageUrl: "/Photos/Collage/dayplaceholder.jpeg", content: { message: "You show love in a language all your own...", note: "You make me feel loved not just in words but in a thousand quiet ways.", extraPhotos: [] }},
     { day: 8, date: "January 8th", title: "Our Favorites", subtitle: "The Things We Share", icon: Music, bgColor: "#e0f7fa", imageUrl: "/Photos/Collage/dayplaceholder.jpeg", content: { message: "These are the pieces of us...", note: "Every couple has their things. These are ours.", extraPhotos: [] }},
@@ -479,6 +510,29 @@ const AnniversaryCalendar = () => {
                       ))}
                     </div>
                   )}
+                </div>
+              </div>
+            )}
+
+            {/* Apple Music Playlist - Only for Day 5 */}
+            {day.content.appleMusicPlaylist && (
+              <div style={{marginBottom: '40px', marginTop: day.content.extraPhotos && day.content.extraPhotos.length > 0 ? '40px' : '0'}}>
+                <h3 style={{color: '#ff69b4', fontSize: '1.3rem', marginBottom: '20px', textAlign: 'center'}}>🎵 Our Playlist: Cinderella</h3>
+                <div style={{display: 'flex', justifyContent: 'center'}}>
+                  <iframe 
+                    allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" 
+                    frameBorder="0" 
+                    height="450" 
+                    style={{
+                      width: '100%',
+                      maxWidth: '660px',
+                      overflow: 'hidden',
+                      background: 'transparent',
+                      borderRadius: '12px'
+                    }}
+                    sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" 
+                    src={day.content.appleMusicPlaylist}
+                  />
                 </div>
               </div>
             )}
