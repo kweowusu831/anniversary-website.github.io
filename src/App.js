@@ -24,7 +24,7 @@ const AnniversaryCalendar = () => {
     document.body.appendChild(script);
   }, []);
 
-  const demoMode = false; // Set to false for production
+  const demoMode = true; // Set to false for production
 
   const saveResponse = (dayNumber, response, dayTitle, dayDate) => {
     const newResponses = { ...responses, [dayNumber]: response };
