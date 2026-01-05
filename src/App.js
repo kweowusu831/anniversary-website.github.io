@@ -47,6 +47,7 @@ const AnniversaryCalendar = () => {
 
   const isDateUnlocked = (dayNumber) => {
     if (demoMode) return true;
+    if (dayNumber === 6) return true; // Day 6 always unlocked
     const currentDate = new Date();
     const unlockDate = new Date(2026, 0, dayNumber);
     return currentDate >= unlockDate;
