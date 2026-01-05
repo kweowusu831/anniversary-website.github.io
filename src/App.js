@@ -234,7 +234,7 @@ const AnniversaryCalendar = () => {
         "/Photos/Collage/image61.jpeg"
       ] 
     }},
-    { day: 3, date: "January 3rd", title: "When I Knew", subtitle: "The Moment I Realized", icon: Heart, bgColor: "#f0fff0", imageUrl: "/Photos/Collage/image172.jpeg", content: { 
+    { day: 3, date: "January 3rd", title: "When I Knew", subtitle: "The Moment I Realized", icon: Heart, bgColor: "#f0fff0", imageUrl: "/Photos/Collage/image97.jpeg", content: { 
       message: "Love is something that some say has a timeline, and others say you know when you know. I personally believe that the latter is true. I found myself loving you before I was consciously aware of it, like my heart understood what my mind had not yet accepted.\n\nI will never forget when I came home for Winter Break and we were on the phone. It was such a simple conversation, nothing extraordinary, nothing scripted, but I found my heart yearning for you, especially after our first date. I was so happy to hear your voice. It felt like home. I found myself thinking over and over about how much I cared about you, how much I missed you, and how desperately I wanted you to be mine.\n\nThen it happened. I blurted out \"I love you\" while we were on the phone, and immediately, I began to panic. My heart was racing. I was so scared and genuinely thought everything was over because of that one small slip. But one thing I did not do was regret it. I kept replaying it in my mind. Did I really say that? Did I mean it? But after thinking about it for hours, days, and weeks, one thing stood true: how I felt. I loved you, and that was the one thing I did not feel confused about or want to deny.", 
       note: "It was worth it. I am so glad I said what I said because it was the truth, and you deserved to know it. Getting to spend time with you on the phone, seeing you try out cute outfits and ask for my opinion, seeing you drunk and calling me while you were in ATL, it all meant so much to me. Every moment made my year end that much better, that much sweeter, and that much more meaningful.\n\nThat was the moment I knew. Not because it was perfect, but because it was real. And I would not change a single thing about it.", 
       extraPhotos: [
@@ -336,7 +336,41 @@ const AnniversaryCalendar = () => {
       ],
       appleMusicPlaylist: "https://embed.music.apple.com/us/playlist/cinderella/pl.u-MDAWkADTAzJmjWv"
     }},
-    { day: 6, date: "January 6th", title: "The Hard Days", subtitle: "How We Grew", icon: Mountain, bgColor: "#fff0f5", imageUrl: "/Photos/Collage/dayplaceholder.jpeg", content: { message: "Love is not just sunshine. It is choosing each other even when it is hard...", note: "The fact that we are here stronger than before means everything.", extraPhotos: [] }},
+    { day: 6, date: "January 6th", title: "The Hard Days", subtitle: "How We Grew", icon: Mountain, bgColor: "#fff0f5", imageUrl: "/Photos/Collage/image183.jpeg", content: { 
+      message: "With any relationship comes disagreement, and in healthy relationships, arguments are sometimes unavoidable. Lately, though, it has felt like we have been getting caught in small disagreements. From what I have learned, this is a stage that many long-term couples go through, where it becomes harder to move past the same argument even when the issue itself is small. That does not mean something is wrong between us; it means something deeper is asking to be understood.\n\nWhen the same concern keeps coming up, it is usually not about the surface-level issue but about what is underneath it. That is what I want us to focus on, not to place blame, but to grow closer through understanding.\n\nBefore anything else, I want you to know how deeply I care about you. I do not want you to change who you are in any way. You are perfect to me. You are my beautiful woman, and I love you exactly as you are. I chose you as you are, and my intention has never been to change you or make you different, because that would mean losing the person I love. What I want is not for you to change, but for us to change how we approach disagreements.\n\nI have been reflecting a lot on my own role in our conflicts. I recognize that I sometimes interpret small things, like a text message or a comment, as much bigger than they are. This often comes from my fear of loss or the worry that you might be drifting away from me. That fear is rooted in my past experiences with abandonment, and I am becoming more aware of how that lens can distort my perspective. I want to be clear that many of the small disagreements can stop with me, by changing that lens and choosing not to let my fears take over. I promised you a few days ago that I would be better about the smaller things, and I truly mean that. I am committed to pausing, asking for clarity, and reminding myself of your love before reacting.", 
+      note: "I also want you to know that when it feels like I want you to change or that you are not enough, that hurts because it is the opposite of how I feel. I love you for who you are. You, Sandrine. I admire your heart, your strength, and the way you show up in the world. I know you have been through a lot, and I understand the expectations that have been placed on you, but I want you to truly hear this: I do not need you to be different. That has never been my intention, and I am genuinely sorry if anything I have said or done ever made it feel that way.\n\nWhat I ask for is reassurance, not change. Reassurance helps quiet that fear in me, just as I am working to quiet it by changing how I interpret things. I believe this is something we can both meet with more softness. That means starting difficult conversations by reminding each other that we care, asking instead of assuming when something hurts, and focusing on one moment at a time instead of bringing everything into one discussion. It means naming how something made us feel before defending ourselves, assuming love rather than harm, and taking breaks when emotions feel too high, without disconnecting from each other.\n\nThere will always be things we do not agree on, and that is okay. We are not trying to win arguments or prove who is right. We are trying to understand each other. The goal is to be able to say, \"This hurt me,\" and then ask why, so we can move toward closeness instead of distance.\n\nRepair is not about winning an argument; it is about protecting the relationship. Lately, it feels like we may have been trying to be correct instead of connected, and for that, I am sorry. I am sorry for the petty arguments, and I truly want us to do better. That is why I have been reflecting and trying to grow. While I am committed to changing my lens, I also want to be honest when something hurts.\n\nWhen you said it baffled you, it hurt my feelings. I understand why you felt that way, and you are allowed to feel however you feel. I just ask that you also see how those words might have landed for me. If I shared something vulnerable and felt dismissed, it would be painful. I am not trying to prove myself right. I just want you to understand where I am coming from.\n\nI believe this all begins with softening, by reminding each other that we love one another, that we are on the same team, and that we are fighting for us, not against each other. Even when things are not fully resolved, I want us to end knowing that we are okay, that our relationship is safe, and that we will figure things out together.", 
+      extraPhotos: [
+        "/Photos/Collage/image173.jpeg",
+        "/Photos/Collage/image174.jpeg",
+        "/Photos/Collage/image175.jpeg",
+        "/Photos/Collage/video1.mp4",
+        "/Photos/Collage/image176.jpeg",
+        "/Photos/Collage/image177.jpeg",
+        "/Photos/Collage/image178.jpeg",
+        "/Photos/Collage/image179.jpeg",
+        "/Photos/Collage/video2.mp4",
+        "/Photos/Collage/image180.jpeg",
+        "/Photos/Collage/image181.jpeg",
+        "/Photos/Collage/image182.jpeg",
+        "/Photos/Collage/image184.jpeg",
+        "/Photos/Collage/image185.jpeg",
+        "/Photos/Collage/image186.jpeg",
+        "/Photos/Collage/image187.jpeg"
+      ],
+      hasAgreement: true,
+      agreementRules: [
+        "We start with care and intention. Before getting into the issue, we remind each other that we love one another and that the goal is understanding, not winning.",
+        "No mind-reading or assumptions. If something feels hurtful or confusing, we ask what was meant instead of assuming intent.",
+        "Focus on the moment, not a pattern. We avoid words like \"always\" and \"never,\" and talk about the specific situation being discussed.",
+        "Name the feeling before the problem. Sharing how something made us feel first helps the other person listen without becoming defensive.",
+        "One issue at a time. Bringing up multiple issues at once can make the original concern feel dismissed or less important.",
+        "Assume love, not harm. We remind ourselves that neither of us is trying to hurt the other.",
+        "Take breaks when needed. If emotions feel overwhelming, we pause and return to the conversation when we are calmer.",
+        "Validate before responding. We acknowledge the other person's feelings before explaining our own perspective.",
+        "Avoid character judgments. We focus on behaviors and moments, not who the other person is.",
+        "End with reassurance. Even if everything is not fully resolved, we remind each other that the relationship is safe."
+      ]
+    }},
     { day: 7, date: "January 7th", title: "How You Love Me", subtitle: "The Ways I Feel It", icon: Heart, bgColor: "#faf0e6", imageUrl: "/Photos/Collage/dayplaceholder.jpeg", content: { message: "You show love in a language all your own...", note: "You make me feel loved not just in words but in a thousand quiet ways.", extraPhotos: [] }},
     { day: 8, date: "January 8th", title: "Our Favorites", subtitle: "The Things We Share", icon: Music, bgColor: "#e0f7fa", imageUrl: "/Photos/Collage/dayplaceholder.jpeg", content: { message: "These are the pieces of us...", note: "Every couple has their things. These are ours.", extraPhotos: [] }},
     { day: 9, date: "January 9th", title: "How I See You", subtitle: "Who You Really Are", icon: Sparkles, bgColor: "#fff8dc", imageUrl: "/Photos/Collage/dayplaceholder.jpeg", content: { message: "When no one else is watching I see...", note: "This is who you are to me. Not the version you show the world but the real you.", extraPhotos: [] }},
@@ -405,15 +439,27 @@ const AnniversaryCalendar = () => {
                     position: 'relative',
                     backgroundColor: '#000'
                   }}>
-                    <img 
-                      src={day.content.extraPhotos[currentPhotoIndex]} 
-                      alt={`Memory ${currentPhotoIndex + 1}`} 
-                      style={{
-                        width: '100%',
-                        height: '100%',
-                        objectFit: 'contain'
-                      }}
-                    />
+                    {day.content.extraPhotos[currentPhotoIndex].endsWith('.mp4') ? (
+                      <video 
+                        src={day.content.extraPhotos[currentPhotoIndex]}
+                        controls
+                        style={{
+                          width: '100%',
+                          height: '100%',
+                          objectFit: 'contain'
+                        }}
+                      />
+                    ) : (
+                      <img 
+                        src={day.content.extraPhotos[currentPhotoIndex]} 
+                        alt={`Memory ${currentPhotoIndex + 1}`} 
+                        style={{
+                          width: '100%',
+                          height: '100%',
+                          objectFit: 'contain'
+                        }}
+                      />
+                    )}
                   </div>
 
                   {/* Previous Button */}
@@ -533,6 +579,71 @@ const AnniversaryCalendar = () => {
                     sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" 
                     src={day.content.appleMusicPlaylist}
                   />
+                </div>
+              </div>
+            )}
+
+            {/* Agreement Section for Day 6 */}
+            {day.content.hasAgreement && (
+              <div style={{marginTop: '40px', marginBottom: '40px', padding: '30px', backgroundColor: '#fff5f7', borderRadius: '12px', border: '3px solid #ff69b4'}}>
+                <h3 style={{color: '#ff69b4', fontSize: '1.5rem', marginBottom: '20px', textAlign: 'center'}}>
+                  💕 Our Shared Rules for Disagreements 💕
+                </h3>
+                <div style={{marginBottom: '25px'}}>
+                  {day.content.agreementRules.map((rule, index) => (
+                    <div key={index} style={{
+                      marginBottom: '15px',
+                      padding: '15px',
+                      backgroundColor: '#fff',
+                      borderRadius: '8px',
+                      border: '1px solid #ffe4e8',
+                      lineHeight: '1.6'
+                    }}>
+                      <strong style={{color: '#d63384'}}>Rule {index + 1}:</strong> {rule}
+                    </div>
+                  ))}
+                </div>
+                <div style={{textAlign: 'center', padding: '20px', backgroundColor: '#fff', borderRadius: '10px', border: '2px solid #ff69b4'}}>
+                  <p style={{fontSize: '1.1rem', marginBottom: '20px', color: '#333', lineHeight: '1.6'}}>
+                    I am willing to try these rules with you and work on building a stronger, healthier relationship together.
+                  </p>
+                  <button
+                    onClick={() => {
+                      const agreed = window.confirm('Are you willing to commit to these rules for our relationship?');
+                      if (agreed) {
+                        // Send email notification
+                        if (window.emailjs) {
+                          window.emailjs.send('service_bzpdvam', 'template_3tzuwey', {
+                            day_number: 6,
+                            day_title: 'Agreement to Relationship Rules',
+                            day_date: day.date,
+                            response_text: 'Sandrine has agreed to commit to the shared rules for disagreements! ✅💕'
+                          }).then(
+                            () => console.log('Agreement email sent!'),
+                            (error) => console.log('Email failed:', error)
+                          );
+                        }
+                        alert('Thank you for committing to us! ❤️ Barron will receive your agreement.');
+                      }
+                    }}
+                    style={{
+                      backgroundColor: '#ff69b4',
+                      color: '#fff',
+                      border: 'none',
+                      padding: '15px 40px',
+                      borderRadius: '10px',
+                      fontSize: '1.2rem',
+                      cursor: 'pointer',
+                      fontFamily: 'Times New Roman, serif',
+                      fontWeight: 'bold',
+                      boxShadow: '0 4px 15px rgba(255, 105, 180, 0.3)',
+                      transition: 'transform 0.2s'
+                    }}
+                    onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+                    onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
+                  >
+                    ✓ I Agree to These Rules
+                  </button>
                 </div>
               </div>
             )}
