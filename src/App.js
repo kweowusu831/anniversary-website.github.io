@@ -169,15 +169,14 @@ const AnniversaryCalendar = () => {
   ];
 
   const favors = [
-    "One free pass - Watch your favorite show with no complaints",
     "Breakfast in bed - Your choice made with love",
     "Full body massage - 30 minutes minimum",
-    "Shopping trip - I carry all the bags and give honest opinions",
     "Your choice of date night - Wherever you want to go",
-    "Clean the entire house - You relax I handle it",
-    "Cook your favorite meal - No takeout just homemade",
-    "Movie marathon - Your pick your choice your couch spot",
-    "One full day of Yes - Whatever you ask I say yes"
+    "Movie or show marathon - Your pick your choice your couch spot",
+    "One full day of Yes - Whatever you ask I say yes",
+    "One free pass for me to do whatever you want",
+    "Head Pass - Give you head whenever, no complaints"
+    
   ];
 
   const spinForRestaurant = () => {
