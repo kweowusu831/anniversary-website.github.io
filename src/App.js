@@ -159,13 +159,7 @@ const AnniversaryCalendar = () => {
   ];
 
   const restaurants = [
-    "Italian Restaurant - Your favorite pasta spot",
-    "Steakhouse - That place with the amazing ribeye",
-    "Sushi Restaurant - All the sushi you can eat",
-    "French Bistro - Romantic and classy",
-    "Mexican Restaurant - Tacos and margaritas",
-    "Seafood Restaurant - Fresh catch of the day",
-    "Asian Fusion - Something adventurous"
+    "Del Frisco's Double Eagle Steakhouse"
   ];
 
   const favors = [
