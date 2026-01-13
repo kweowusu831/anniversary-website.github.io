@@ -24,7 +24,7 @@ const AnniversaryCalendar = () => {
     document.body.appendChild(script);
   }, []);
 
-  const demoMode = true; // Set to false for production
+  const demoMode = false; // Set to false for production
 
   const saveResponse = (dayNumber, response, dayTitle, dayDate) => {
     const newResponses = { ...responses, [dayNumber]: response };
@@ -159,18 +159,25 @@ const AnniversaryCalendar = () => {
   ];
 
   const restaurants = [
-    "Del Frisco's Double Eagle Steakhouse"
+    "Italian Restaurant - Your favorite pasta spot",
+    "Steakhouse - That place with the amazing ribeye",
+    "Sushi Restaurant - All the sushi you can eat",
+    "French Bistro - Romantic and classy",
+    "Mexican Restaurant - Tacos and margaritas",
+    "Seafood Restaurant - Fresh catch of the day",
+    "Asian Fusion - Something adventurous"
   ];
 
   const favors = [
+    "One free pass - Watch your favorite show with no complaints",
     "Breakfast in bed - Your choice made with love",
     "Full body massage - 30 minutes minimum",
+    "Shopping trip - I carry all the bags and give honest opinions",
     "Your choice of date night - Wherever you want to go",
-    "Movie or show marathon - Your pick your choice your couch spot",
-    "One full day of Yes - Whatever you ask I say yes",
-    "One free pass for me to do whatever you want",
-    "Head Pass - Give you head whenever, no complaints"
-    
+    "Clean the entire house - You relax I handle it",
+    "Cook your favorite meal - No takeout just homemade",
+    "Movie marathon - Your pick your choice your couch spot",
+    "One full day of Yes - Whatever you ask I say yes"
   ];
 
   const spinForRestaurant = () => {
@@ -382,12 +389,121 @@ const AnniversaryCalendar = () => {
         "/Photos/Collage/image201.jpeg"
       ] 
     }},
-    { day: 8, date: "January 8th", title: "Our Favorites", subtitle: "The Things We Share", icon: Music, bgColor: "#e0f7fa", imageUrl: "/Photos/Collage/dayplaceholder.jpeg", content: { message: "These are the pieces of us...", note: "Every couple has their things. These are ours.", extraPhotos: [] }},
-    { day: 9, date: "January 9th", title: "How I See You", subtitle: "Who You Really Are", icon: Sparkles, bgColor: "#fff8dc", imageUrl: "/Photos/Collage/dayplaceholder.jpeg", content: { message: "When no one else is watching I see...", note: "This is who you are to me. Not the version you show the world but the real you.", extraPhotos: [] }},
-    { day: 10, date: "January 10th", title: "Letters I Never Sent", subtitle: "Words I Kept Inside", icon: BookOpen, bgColor: "#ffefd5", imageUrl: "/Photos/Collage/dayplaceholder.jpeg", content: { message: "There are things I felt but did not always say...", note: "Some feelings are too important to stay silent about.", extraPhotos: [] }},
-    { day: 11, date: "January 11th", title: "Our Future", subtitle: "This Year Together", icon: Calendar, bgColor: "#e6f3ff", imageUrl: "/Photos/Collage/dayplaceholder.jpeg", content: { message: "Here is what I am looking forward to...", note: "The future feels less scary and more exciting when it is with you.", extraPhotos: [] }},
-    { day: 12, date: "January 12th", title: "Our Forever", subtitle: "What Us Looks Like", icon: Infinity, bgColor: "#f0e6ff", imageUrl: "/Photos/Collage/dayplaceholder.jpeg", content: { message: "When I think about the long road ahead...", note: "Two years down. A lifetime to go.", extraPhotos: [] }},
-    { day: 13, date: "January 13th", title: "Happy Anniversary", subtitle: "Two Years of Us", icon: Heart, bgColor: "#ffe4e8", imageUrl: "/Photos/Collage/dayplaceholder.jpeg", content: { message: "We made it. Two years.", note: "Thank you for two years of being exactly who you are. I would not change a single thing.", extraPhotos: [] }},
+    { day: 8, date: "January 8th", title: "Our Favorites", subtitle: "The Things We Share", icon: Music, bgColor: "#e0f7fa", imageUrl: "/Photos/Collage/image211.jpeg", content: { 
+      message: "Every couple has the things that make them unmistakably who they are. Some couples have grand traditions or carefully planned routines, but what makes us us lives in the quiet simplicity of the moments we share. When I think about our favorites, I realize that they are not defined by extravagance or excitement. They are defined by presence. They are defined by us.\n\nAnything I do with you becomes a special occasion. Whether we are watching movies together, playing Ludo and laughing through every move, listening to music that somehow feels more meaningful when it plays between us, or simply holding each other in silence, those moments matter deeply to me. They ground me. They remind me of how lucky I am.", 
+      note: "There is something so beautiful about the way we enjoy the simplest things together. Being in your arms feels like rest. Sitting next to you feels like peace. Laughing with you feels like joy in its purest form. What makes these moments unforgettable is not what we are doing, but who I am doing them with. You are my favorite person, and loving you has made even the smallest moments feel sacred.", 
+      extraPhotos: [
+        "/Photos/Collage/image203.jpeg",
+        "/Photos/Collage/image204.jpeg",
+        "/Photos/Collage/image205.jpeg",
+        "/Photos/Collage/image206.jpeg",
+        "/Photos/Collage/image207.jpeg",
+        "/Photos/Collage/image208.jpeg",
+        "/Photos/Collage/image209.jpeg",
+        "/Photos/Collage/image210.jpeg"
+      ] 
+    }},
+    { day: 9, date: "January 9th", title: "How I See You", subtitle: "Who You Really Are", icon: Sparkles, bgColor: "#fff8dc", imageUrl: "/Photos/Collage/image227.jpeg", content: { 
+      message: "If someone were to ask me how I see you, I would struggle to give them a single answer. Not because I do not know how I feel, but because there is so much love and admiration inside me that words feel small in comparison. I see you as one of the greatest blessings God has ever placed in my life. You are truly an angel walking this earth.\n\nYou bring me a joy that feels steady and real, and a comfort that feels safe and warm. There are moments where I look at you and feel overwhelmed by gratitude, realizing that out of all the possibilities in this world, I get to love you. I get to be chosen by you. That alone feels miraculous.", 
+      note: "You are rare in a way that cannot be replicated. You are one of one. Your kindness, your beauty, your patience, and your love make you the most special soul I have ever encountered. I cannot get enough of you. When I am asked how I see you, I see infinity. I see a woman so uniquely herself that she stands alone, incomparable, and endlessly cherished.", 
+      extraPhotos: [
+        "/Photos/Collage/image216.jpeg",
+        "/Photos/Collage/image217.jpeg",
+        "/Photos/Collage/image218.jpeg",
+        "/Photos/Collage/image219.jpeg",
+        "/Photos/Collage/image220.jpeg",
+        "/Photos/Collage/image221.jpeg",
+        "/Photos/Collage/image222.jpeg",
+        "/Photos/Collage/image223.jpeg",
+        "/Photos/Collage/image224.jpeg",
+        "/Photos/Collage/image225.jpeg",
+        "/Photos/Collage/image226.jpeg",
+        "/Photos/Collage/image228.jpeg",
+        "/Photos/Collage/image229.jpeg",
+        "/Photos/Collage/image230.jpeg",
+        "/Photos/Collage/image231.jpeg",
+        "/Photos/Collage/image232.jpeg",
+        "/Photos/Collage/image233.jpeg",
+        "/Photos/Collage/image234.jpeg",
+        "/Photos/Collage/image235.jpeg",
+        "/Photos/Collage/image236.jpeg",
+        "/Photos/Collage/image237.jpeg"
+      ] 
+    }},
+    { day: 10, date: "January 10th", title: "How You Changed Me", subtitle: "The Ways You Transformed My Life", icon: BookOpen, bgColor: "#ffefd5", imageUrl: "/Photos/Collage/image238.jpeg", content: { 
+      message: "If I were asked how you changed me, I would not hesitate, because loving you has transformed me in ways I never expected. Before you came into my life, things were not easy. I carried pain, frustration, and negativity shaped by difficult experiences. I moved through life guarded and uncertain, doing my best but often feeling weighed down.\n\nThen you entered my life, and slowly, gently, everything began to change. My academics improved because I felt motivated again. My social life expanded because I felt more confident. My mindset shifted because I finally believed in the possibility of something better. You were the light I needed, even before I realized I was searching for it.", 
+      note: "I am not saying I depend on you, but I am saying that loving you has changed the way I approach life. You made me want more. You made me want to be better. You inspired me to grow, to work harder, and to face challenges without fear. You made me a man who strives daily and stands firm in the face of adversity. You are my light, and I will always be grateful for the way you changed me.", 
+      extraPhotos: [
+        "/Photos/Collage/image239.jpeg",
+        "/Photos/Collage/image240.jpeg",
+        "/Photos/Collage/image241.jpeg",
+        "/Photos/Collage/image242.jpeg",
+        "/Photos/Collage/image243.jpeg",
+        "/Photos/Collage/image244.jpeg",
+        "/Photos/Collage/image245.jpeg"
+      ] 
+    }},
+    { day: 11, date: "January 11th", title: "Our Future", subtitle: "This Year Together", icon: Calendar, bgColor: "#e6f3ff", imageUrl: "/Photos/Collage/image246.jpeg", content: { 
+      message: "I cannot see the future, and I do not know exactly what it holds for us, but I know what I promise to bring into it. I promise effort. I promise growth. I promise consistency. Most importantly, I promise choice. I will always choose you.\n\nMany people grow comfortable in relationships and slowly stop trying, but that will never be me. Loving you brings me genuine happiness. You are one in infinity, and I never want you to feel overlooked, undervalued, or taken for granted. I want you to always feel chosen, desired, and deeply loved.", 
+      note: "As I continue to reach new levels in life, I promise to pour back into you everything you have poured into me. A good woman is the crown of a man's hand, and you are my queen. I will protect you, support you, uplift you, and provide for you in every way I can, just as you have done for me.", 
+      extraPhotos: [
+        "/Photos/Collage/image247.jpeg",
+        "/Photos/Collage/image248.jpeg",
+        "/Photos/Collage/image249.jpeg",
+        "/Photos/Collage/image250.jpeg",
+        "/Photos/Collage/image251.jpeg",
+        "/Photos/Collage/image252.jpeg",
+        "/Photos/Collage/image253.jpeg",
+        "/Photos/Collage/image254.jpeg",
+        "/Photos/Collage/image255.jpeg",
+        "/Photos/Collage/image256.jpeg",
+        "/Photos/Collage/image257.jpeg",
+        "/Photos/Collage/image258.jpeg",
+        "/Photos/Collage/image259.jpeg",
+        "/Photos/Collage/image260.jpeg",
+        "/Photos/Collage/image261.jpeg"
+      ] 
+    }},
+    { day: 12, date: "January 12th", title: "Our Forever", subtitle: "What Us Looks Like", icon: Infinity, bgColor: "#f0e6ff", imageUrl: "/Photos/Collage/image262.jpeg", content: { 
+      message: "Forever is a long time, but with you it feels light. With you, forever feels safe. With you, forever feels exciting and full of possibility. I want to experience life with you because you are everything I have ever hoped for and so much more.\n\nI want to build a life with you. I want us to grow together, to get married, to have children, and to travel the world side by side. I want us to laugh uncontrollably, cry honestly, and hold each other through every season life brings. I want us to experience countless firsts and create traditions that feel uniquely ours.", 
+      note: "You are not just someone I love. You are the person I choose every day. You are my partner, my home, and my forever.", 
+      extraPhotos: [
+        "/Photos/Collage/image263.jpeg",
+        "/Photos/Collage/image264.jpeg",
+        "/Photos/Collage/image265.jpeg",
+        "/Photos/Collage/image266.jpeg",
+        "/Photos/Collage/image267.jpeg"
+      ] 
+    }},
+    { day: 13, date: "January 13th", title: "Happy Anniversary", subtitle: "Two Years of Us", icon: Heart, bgColor: "#ffe4e8", imageUrl: "/Photos/Collage/image291.jpeg", content: { 
+      message: "Happy anniversary, Sandrine Dissi Emani Judith Fankam Mbonampeka. I say your full name because loving you is not casual. It is intentional. It is serious. It is something I hold with respect, pride, and gratitude every single day.\n\nTwo years. Two years of choosing you in big moments and small ones. Two years of learning how to love better, how to listen deeper, and how to grow together rather than apart. In these two years, you have not only been my partner, but my safe place, my source of peace, and one of the greatest blessings of my life.\n\nYou have a way of loving me that feels gentle and steady. You see me fully, not just at my best, but also in my moments of doubt and weakness, and you still choose me. Your patience has taught me grace. Your kindness has softened parts of me I did not realize were hardened by life. Your love has made me feel safe in a world that is often unpredictable.\n\nI love you more than words could ever fully explain. My love for you lives in the quiet moments, in the prayers I say for you when you are not in the room, and in the way my heart feels at peace when I think of you. I pray that our love remains everlasting and continues to renew itself through every season of life. I pray that we never become careless with each other's hearts, and that we always protect what we have built with intention and effort.", 
+      note: "I choose you every single day. I choose you on the easy days and the hard ones. I choose you when life feels light and when it feels heavy. You are beautiful in ways that go far beyond appearance. You are understanding, compassionate, patient, and deeply loving. You are a one in infinity woman, and I am endlessly grateful that you are my woman.\n\nLoving you has taught me what commitment truly means. It is not just staying, but showing up. It is not just words, but action. It is not just passion, but consistency. You inspire me to be a better man, not out of fear of losing you, but out of love and respect for you.\n\nI continue to prefer you every single day, the way one learns to cherish something more deeply with time. Like fine wine, our love has matured, becoming richer, stronger, and more meaningful. I look at you now and love you differently than I did before, not less, but deeper, fuller, and with greater intention.\n\nI pray that as your chalice, I hold you carefully and honor the love you pour into me. That you never spill unless it is an overflow of abundance, joy, peace, and grace. I want to be a place where you feel safe to be soft, safe to be strong, and safe to be fully yourself.\n\nThank you for loving me the way you do. Thank you for choosing me even when it requires patience. Thank you for growing with me and believing in what we are building together. I am beyond grateful for our relationship and for the woman you are.\n\nI thank God for you every day. I thank God for your heart, your spirit, and your presence in my life. Happy anniversary to my lovebug, my best friend, my answered prayer, and my forever.", 
+      extraPhotos: [
+        "/Photos/Collage/image268.jpeg",
+        "/Photos/Collage/image269.jpeg",
+        "/Photos/Collage/image270.jpeg",
+        "/Photos/Collage/image271.jpeg",
+        "/Photos/Collage/image272.jpeg",
+        "/Photos/Collage/image273.jpeg",
+        "/Photos/Collage/image274.jpeg",
+        "/Photos/Collage/image275.jpeg",
+        "/Photos/Collage/image276.jpeg",
+        "/Photos/Collage/image277.jpeg",
+        "/Photos/Collage/image278.jpeg",
+        "/Photos/Collage/image279.jpeg",
+        "/Photos/Collage/image280.jpeg",
+        "/Photos/Collage/image281.jpeg",
+        "/Photos/Collage/image282.jpeg",
+        "/Photos/Collage/image283.jpeg",
+        "/Photos/Collage/image284.jpeg",
+        "/Photos/Collage/image285.jpeg",
+        "/Photos/Collage/image286.jpeg",
+        "/Photos/Collage/image287.jpeg",
+        "/Photos/Collage/image288.jpeg",
+        "/Photos/Collage/image289.jpeg",
+        "/Photos/Collage/image290.jpeg"
+      ] 
+    }},
     { day: 14, date: "January 14th", title: "My Promise: To Listen", subtitle: "Promises for Our Future", icon: Heart, bgColor: "#e8f5e9", imageUrl: "/Photos/Collage/dayplaceholder.jpeg", content: { message: "I promise to truly listen to you, not just hear your words but understand your heart...", note: "Your thoughts, your feelings, your dreams - they all matter to me, and I will always make space for them.", extraPhotos: [] }},
     { day: 15, date: "January 15th", title: "My Promise: To Support", subtitle: "Promises for Our Future", icon: Mountain, bgColor: "#fff3e0", imageUrl: "/Photos/Collage/dayplaceholder.jpeg", content: { message: "I promise to support your dreams and ambitions, to be your biggest cheerleader...", note: "Whatever you want to achieve, I will be right there beside you, believing in you every step of the way.", extraPhotos: [] }},
     { day: 16, date: "January 16th", title: "My Promise: To Grow", subtitle: "Promises for Our Future", icon: Sparkles, bgColor: "#f3e5f5", imageUrl: "/Photos/Collage/dayplaceholder.jpeg", content: { message: "I promise to keep growing with you, to never stop becoming a better partner...", note: "We will grow together, learn together, and become better versions of ourselves for each other.", extraPhotos: [] }},
@@ -430,9 +546,9 @@ const AnniversaryCalendar = () => {
             <Icon className="w-12 h-12 mb-3" style={{position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)'}} />
           </div>
           <div className="p-8">
-            <h2 className="text-3xl font-bold mb-2" style={day.day === 6 ? {fontFamily: 'Georgia, serif'} : {}}>Day {day.day} - {day.title}</h2>
-            <p className="text-lg italic mb-4" style={day.day === 6 ? {fontFamily: 'Georgia, serif', lineHeight: '1.8', fontSize: '1.1rem'} : {}}>{day.content.message}</p>
-            <p className="text-gray-600 italic mb-6" style={day.day === 6 ? {fontFamily: 'Georgia, serif', lineHeight: '1.8', fontSize: '1.05rem'} : {}}>{day.content.note}</p>
+            <h2 className="text-3xl font-bold mb-2" style={[6,7,8,9,10,11,12,13].includes(day.day) ? {fontFamily: 'Georgia, serif'} : {}}>Day {day.day} - {day.title}</h2>
+            <p className="text-lg italic mb-4" style={[6,7,8,9,10,11,12].includes(day.day) ? {fontFamily: 'Georgia, serif', lineHeight: '1.8', fontSize: '1.1rem'} : (day.day === 13 ? {fontFamily: 'Playfair Display, Georgia, serif', lineHeight: '1.9', fontSize: '1.15rem', fontWeight: '500'} : {})}>{day.content.message}</p>
+            <p className="text-gray-600 italic mb-6" style={[6,7,8,9,10,11,12].includes(day.day) ? {fontFamily: 'Georgia, serif', lineHeight: '1.8', fontSize: '1.05rem'} : (day.day === 13 ? {fontFamily: 'Playfair Display, Georgia, serif', lineHeight: '1.9', fontSize: '1.1rem', fontWeight: '500'} : {})}>{day.content.note}</p>
 
             {/* Photo Carousel - Before Response Box */}
             {day.content.extraPhotos && day.content.extraPhotos.length > 0 && (
